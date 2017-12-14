@@ -1,7 +1,6 @@
 {
   "name": "my_new_project",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "mocha client/src/specs",
@@ -19,5 +18,6 @@
   "devDependencies": {
     "mocha": "^4.0.1",
     "webpack": "^3.10.0"
-  }
+  },
+  "description": ""
 }
