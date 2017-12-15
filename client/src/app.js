@@ -1,6 +1,13 @@
 var FormView = require('./views/formView')
 
 var makeRequest = function(url, callback) {
+	var request = new XMLHttpRequest();
+	request.open('GET', url);
+	request.addEventListener('load', callback);
+	request.send();
+}
+
+var renderForm = function() {
 
 }
 
@@ -15,9 +22,7 @@ var app = function() {
 
 
 
-var renderForm = function() {
 
-}
 
 window.addEventListener("load", function(){
 	alert("Loaded!");
