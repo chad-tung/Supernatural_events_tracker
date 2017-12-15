@@ -64,5 +64,6 @@ app.get("/events/:id", function(req, res) {
 	});
 })
 
-// app.get('/event-form', function(req, res) {
-// })
+app.get('/event-form', function(req, res) {
+	res.sendFile(__dirname + "/client/build/index.html");
+})
