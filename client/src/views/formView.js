@@ -4,7 +4,7 @@ var FormView = function() {
 
 FormView.prototype = {
   render: function() {
-    var body = document.getElementById('form-section');
+    var body = document.getElementById('form-page');
 
     var form = document.createElement("form");
     form.id = "event-form";
