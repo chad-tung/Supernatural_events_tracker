@@ -35,9 +35,16 @@ app.get("/api/events", function(req, res){
 });
 
 //create
-// app.post('/new-event', function(req, res){
-//
-// });
+app.post('/eventForm', function(req, res){
+	db.collection("events").save(req.body, function(err, result){
+		if(err) {
+			console.log(err);
+		}
+
+		console.log("Saved to database.");
+		res.redirect("/");
+	});
+});
 
 //read
 //delete
