@@ -6,14 +6,13 @@ var elementCreator = function(elementname, idname, classname, classname2, innerS
   var item = document.createElement(elementname);
   item.id = idname;
   item.classList.add(classname, classname2);
-  item.innerText = innerString;
   return item;
 }
 
 HomeView.prototype = {
   render: function() {
     var homepageDiv = document.getElementById('home-page');
-    var recent_posts = document.getElementById('recent-posts');
+    var recent_posts = elementCreator("div", "recent-posts", "section", "third")
 
     // var homeimageDiv = document.createElement('div');
     // homeimageDiv.id = "home-image";

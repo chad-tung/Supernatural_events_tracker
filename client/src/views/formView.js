@@ -6,7 +6,6 @@ var elementCreator = function(elementname, idname, classname, classname2, innerS
   var item = document.createElement(elementname);
   item.id = idname;
   item.classList.add(classname, classname2);
-  item.innerText = innerString;
   return item;
 }
 
@@ -16,8 +15,6 @@ FormView.prototype = {
 
     var form = document.createElement("form");
     form.id = "event-form";
-
-    console.log('this is rendering kind of');
 
     var formTitle = document.createElement('h2');
     formTitle.innerText = "Event Form";
@@ -61,6 +58,8 @@ FormView.prototype = {
     inputAuthor.name = 'author';
     inputAuthor.placeholder = "Please tell us your name. If you wish to remain anonymous, leave this blank.";
 
+    var submitButton = document.createElement('button');
+
     form.appendChild(formTitle);
     form.appendChild(inputTitle);
     // form.appendChild(inputDate);
@@ -70,6 +69,7 @@ FormView.prototype = {
     form.appendChild(inputDescription);
     form.appendChild(inputImage);
     form.appendChild(inputAuthor);
+    form.appendChild(submitButton);
 
     body.appendChild(form);
   }
