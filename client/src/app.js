@@ -1,13 +1,19 @@
 var FormView = require('./views/formView')
 
-var app = function() {
-	url = "/event-form";
-	makeRequest(url, renderForm);
+var makeRequest = function(url, callback) {
+
 }
 
-var makeRequest = function(url, callback) {
-	
+var app = function() {
+	var url = "/event-form";
+	var postButton = document.getElementById('nav-post');
+	postButton.addEventListener('click', function() {
+		makeRequest(url, renderForm);
+	})
+
 }
+
+
 
 var renderForm = function() {
 
