@@ -19,5 +19,13 @@
     "mocha": "^4.0.1",
     "webpack": "^3.10.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chad-tung/Supernatural_events_tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chad-tung/Supernatural_events_tracker/issues"
+  },
+  "homepage": "https://github.com/chad-tung/Supernatural_events_tracker#readme",
   "description": ""
 }
