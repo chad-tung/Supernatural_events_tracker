@@ -34,7 +34,7 @@ app.get("/api/events", function(req, res){
 	});
 });
 
-app.post('/eventForm', function(req, res){
+app.post('/event-form', function(req, res){
 	db.collection("events").save(req.body, function(err, result){
 		if(err) {
 			console.log(err);

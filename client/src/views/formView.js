@@ -15,6 +15,8 @@ FormView.prototype = {
 
     var form = document.createElement("form");
     form.id = "event-form";
+    form.method = "POST";
+    form.action = "/event-form"
 
     var formTitle = document.createElement('h2');
     formTitle.innerText = "Event Form";
@@ -59,6 +61,7 @@ FormView.prototype = {
     inputAuthor.placeholder = "Please tell us your name. If you wish to remain anonymous, leave this blank.";
 
     var submitButton = document.createElement('button');
+    submitButton.type = 'submit'
 
     form.appendChild(formTitle);
     form.appendChild(inputTitle);
