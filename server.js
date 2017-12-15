@@ -24,3 +24,20 @@ MongoClient.connect('mongodb://localhost:27017/paranormal', function(err, client
 app.get("/", function(req, res){
 	res.sendFile(__dirname + "/client/build/index.html");
 });
+
+app.get("/api/events", function(req, res){
+	db.collection("events").find().toArray(function(err, results){
+		if(err) {
+			console.log(err);
+		}
+		res.json(results)
+	});
+});
+
+//create
+// app.post('/new-event', function(req, res){
+//
+// });
+
+//read
+//delete
