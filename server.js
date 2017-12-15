@@ -34,7 +34,6 @@ app.get("/api/events", function(req, res){
 	});
 });
 
-//create
 app.post('/eventForm', function(req, res){
 	db.collection("events").save(req.body, function(err, result){
 		if(err) {
@@ -55,3 +54,12 @@ app.post("/delete/:id", function(req, res){
 	db.collection("events").deleteOne({"_id": ObjectId(req.params.id)});
 	res.redirect("/api/events");
 });
+
+app.get("/events/:id", function(req, res) {
+	db.collection("events").find({"_id": ObjectId(req.params.id)}).toArray(function(err, results) {
+		if(err) {
+			console.log(err);
+		}
+		res.json(results);
+	});
+})
