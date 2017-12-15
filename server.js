@@ -51,5 +51,7 @@ app.post("/deleteAll", function(req, res) {
 	res.redirect("/");
 });
 
-//read
-//delete
+app.post("/delete/:id", function(req, res){
+	db.collection("events").deleteOne({"_id": ObjectId(req.params.id)});
+	res.redirect("/api/events");
+});
