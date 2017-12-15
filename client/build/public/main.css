@@ -12,6 +12,19 @@ header {
    justify-content: center;
 }
 
+a:visited {
+   color: white;
+}
+
+ul {
+   list-style: none;
+   display: flex;
+}
+
+li {
+   margin-right: 10px;
+}
+
 .logo {
    color: #EFEFEF;
    opacity: 1;
