@@ -39,6 +39,19 @@ HomeView.prototype = {
     homepageDiv.appendChild(aboutDiv);
     homepageDiv.appendChild(recent_posts);
 
+  },
+
+  renderRecent: function(events) {
+    recentPosts = document.getElementById('recent-posts');
+    events.reverse();
+    for(var i=0; i < 3; i++) {
+      var div = document.createElement('div');
+      div.id = `article-${i+1}`;
+      var articleTitle = document.createElement('h3');
+      articleTitle.innerText = events[i].title;
+      div.appendChild(articleTitle);
+      recentPosts.appendChild(div);
+    };
   }
 }
 
