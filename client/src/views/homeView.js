@@ -21,7 +21,10 @@ HomeView.prototype = {
 
     homeimageDiv.appendChild(header);
 
-    
+    var aboutDiv = elementCreator("div", "about-section", "section second");
+    var aboutHeader = elementCreator('h2');
+    aboutHeader.innerText = "ABOUT US";
+
 
     var recent_posts = document.getElementById('recent-posts');
 
