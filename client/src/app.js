@@ -7,19 +7,20 @@ var FormView = require('./views/formView');
 // 	request.send();
 // }
 //
-// var renderForm = function() {
-// 	console.log('hiya');
-// 	var form = new FormView();
-// }
+var renderForm = function() {
+	window.addEventListener('load', function() {
+		var form = new FormView();
+	})
+	console.log('hiya');
+
+}
 
 var app = function() {
-	var form = new FormView();
-	// console.log("app hit");
-	// var form = new FormView();
 	// var url = "/event-form";
-	// var postButton = document.getElementById('nav-post');
-	// postButton.addEventListener('click', renderForm);
-	// })
+	console.log('hi')
+	var postButton = document.getElementById('nav-post');
+	postButton.addEventListener('click', renderForm);
+	})
 }
 
 window.addEventListener("load", app);
