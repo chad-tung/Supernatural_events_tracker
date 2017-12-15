@@ -38,6 +38,29 @@ FormView.prototype = {
       selectType.appendChild(option);
     });
 
+    var inputDescription = document.createElement('input');
+    inputDescription.id = "form-description";
+    inputDescription.name = "description";
+    inputDescription.placeholder = "Please describe what you witnessed, fellow paranormal hunter.";
 
+    var inputImage = document.createElement('input');
+    inputImage.name = "image";
+    inputImage.placeholder = "Paste image url";
+
+    var inputAuthor = document.createElement('input');
+    inputAuthor.name = 'author';
+    inputAuthor.placeholder = "Please tell us your name. If you wish to remain anonymous, leave this blank.";
+
+    form.appendChild(formTitle);
+    form.appendChild(inputTitle);
+    form.appendChild(inputDate);
+    form.appendChild(inputLat);
+    form.appendChild(inputLng);
+    form.appendChild(selectType);
+    form.appendChild(inputDescription);
+    form.appendChild(inputImage);
+    form.appendChild(inputAuthor);
+
+    body.appendChild(form);
   }
 }
