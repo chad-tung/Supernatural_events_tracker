@@ -46,5 +46,10 @@ app.post('/eventForm', function(req, res){
 	});
 });
 
+app.post("/deleteAll", function(req, res) {
+	db.collection("events").deleteMany({});
+	res.redirect("/");
+});
+
 //read
 //delete
