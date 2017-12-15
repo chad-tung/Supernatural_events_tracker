@@ -61,7 +61,8 @@ FormView.prototype = {
     inputAuthor.placeholder = "Please tell us your name. If you wish to remain anonymous, leave this blank.";
 
     var submitButton = document.createElement('button');
-    submitButton.type = 'submit'
+    submitButton.type = 'submit';
+    submitButton.innerText = "Submit";
 
     form.appendChild(formTitle);
     form.appendChild(inputTitle);

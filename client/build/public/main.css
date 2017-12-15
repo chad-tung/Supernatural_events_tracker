@@ -76,3 +76,8 @@ h2 {
    max-width: 600px;
    margin: 15px;
 }
+
+#event-form {
+  display: flex;
+  flex-direction: column;
+}
