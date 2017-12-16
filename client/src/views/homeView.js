@@ -13,16 +13,18 @@ var elementCreator = function(elementname, idname, classname, classname2, innerS
 
 HomeView.prototype = {
   render: function() {
+    var eLib = new ElementLibrary();
     var homepageDiv = document.getElementById('home-page');
-    var recent_posts = elementCreator("div", "recent-posts", "section", "third")
+    var recent_posts = eLib.elementIdClass('div', 'recent-posts', 'section', 'third');
 
     // var homeimageDiv = document.createElement('div');
     // homeimageDiv.id = "home-image";
 
-    var homeimageDiv = elementCreator("div", "home-image", "section", "first");
+    var homeimageDiv = eLib.elementIdClass("div", "home-image", "section", "first");
 
-    var imageText = document.createElement('h1');
-    imageText.innerText = "DISCOVER THE TRUTH";
+    var imageText = eLib.elementTextIdClass('h1', 'DISCOVER THE TRUTH')
+    // document.createElement('h1');
+    // imageText.innerText = "DISCOVER THE TRUTH";
 
     homeimageDiv.appendChild(imageText);
 
