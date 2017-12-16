@@ -1,13 +1,12 @@
 var ElementLibrary = require('../models/elementLibrary');
 
-
+var eLib = new ElementLibrary();
 var ListView = function(eventList) {
   this.render(eventList);
 }
 
 ListView.prototype = {
   render: function(eventList){
-    var eLib = new ElementLibrary();
     var eventListPage = document.getElementById('event-list-page');
     var eventListUL = document.createElement('ul');
     eventListPage.appendChild(eventListUL);
