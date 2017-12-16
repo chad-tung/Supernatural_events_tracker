@@ -3,10 +3,10 @@ var ListView = function(eventList) {
 }
 
 
-var elementCreator = function(elementname, idname, classname, classname2, innerString) {
+var elementCreator = function(elementname, idname, classname, innerString) {
   var item = document.createElement(elementname);
   item.id = idname;
-  item.classList.add(classname, classname2);
+  item.classList.add(classname);
   item.innerText = innerString;
   return item;
 }
@@ -15,12 +15,12 @@ ListView.prototype = {
   render: function(eventList){
     var eventListPage = document.getElementById('event-list-page');
     var eventListUL = document.createElement('ul');
-
     eventListPage.appendChild(eventListUL);
 
     eventList.forEach(function(event){
-      eventListUL.appendChild(elementCreator('li', `event-${event._id}`, "event-li", "", event.title));
+      eventListUL.appendChild(elementCreator('li', `${event._id}`, "event-li", event.title));
     })
+
 
   }
 }
