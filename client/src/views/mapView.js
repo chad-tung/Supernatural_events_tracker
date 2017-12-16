@@ -14,6 +14,10 @@ MapView.prototype = {
     var coords = {lat: 55.3781, lng: -3.4360};
     var zoom = 6;
     var map = new MapWrapper(container, coords, zoom);
+
+    eventList.forEach(function(event){
+      map.addMarker(event.location)
+    })
   }
 }
 
