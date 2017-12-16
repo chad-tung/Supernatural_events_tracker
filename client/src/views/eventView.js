@@ -1,3 +1,5 @@
+var MapWrapper = require("../models/mapWrapper");
+
 var EventView = function(eventList, eventID){
   this.render(eventList, eventID);
 }
@@ -19,7 +21,6 @@ EventView.prototype = {
       if(event._id === eventID){
         ul.appendChild(elementCreator('li', 'event-title', event.title))
         ul.appendChild(elementCreator('li', 'event-date', event.date))
-        ul.appendChild(elementCreator('li', 'event-location', event.location))
         ul.appendChild(elementCreator('li', 'event-type', event.type))
         ul.appendChild(elementCreator('li', 'event-description', event.description))
         ul.appendChild(elementCreator('li', 'event-image', event.image))
@@ -30,6 +31,15 @@ EventView.prototype = {
           ul.appendChild(elementCreator('li', 'event-author', "Anonymous"))
         }
 
+        var container = document.createElement('div');
+        container.id = 'event-map';
+        ul.appendChild(container)
+
+        var coords = event.location;
+        var zoom = 10;
+        var map = new MapWrapper(container, coords, zoom);
+
+        map.addMarker(event.location);
       }
     })
 
