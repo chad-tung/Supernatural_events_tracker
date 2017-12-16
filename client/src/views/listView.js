@@ -5,17 +5,6 @@ var ListView = function(eventList) {
   this.render(eventList);
 }
 
-
-
-
-var elementCreator = function(elementname, idname, classname, innerString) {
-  var item = document.createElement(elementname);
-  item.id = idname;
-  item.classList.add(classname);
-  item.innerText = innerString;
-  return item;
-}
-
 ListView.prototype = {
   render: function(eventList){
     var eLib = new ElementLibrary();
@@ -25,7 +14,6 @@ ListView.prototype = {
 
     eventList.forEach(function(event){
       eventListUL.appendChild(eLib.elementTextIdClass("li", event.title, `${event._id}`, "event-li"));
-      // eventListUL.appendChild(elementCreator('li', `${event._id}`, "event-li", event.title));
     })
 
   }
