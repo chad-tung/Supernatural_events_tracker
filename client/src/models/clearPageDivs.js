@@ -1,6 +1,5 @@
 var ClearPageDivs = function() {
   var divs = document.getElementsByClassName('page');
-  console.log(divs);
 
   for(i=0; i<divs.length; i++){
     this.removeChildNodes(divs.item(i))
