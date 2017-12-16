@@ -11,6 +11,7 @@ MapWrapper.prototype.addMarker = function(coords) {
     position: coords,
     map: this.googleMap
   });
+  // I don't know why, but I need the line below for the previous marker to disappear...
   this.markers.push(marker);
 };
 
@@ -30,10 +31,10 @@ MapWrapper.prototype.addClickEvent = function() {
   google.maps.event.addListener(this.googleMap,
   'click', function(event) {
     this.clearMarkers();
-    // var coords = {lat: event.latLng.lat(), lng: event.latLng.lng()};
     var coord = {lat: event.latLng.lat(), lng: event.latLng.lng()}
     this.addMarker(coord)
     console.log(coord);
+    console.log(this.markers);
   }.bind(this));
 };
 
