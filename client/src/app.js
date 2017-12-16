@@ -2,6 +2,7 @@ var FormView = require('./views/formView');
 var HomeView = require('./views/homeView');
 var ListView = require('./views/listView');
 var MapView = require('./views/mapView');
+var EventView = require('./views/eventView');
 
 var app = function() {
 	var url = "/api/events"
@@ -23,7 +24,7 @@ var requestComplete = function() {
 	var form = new FormView();
 	var list = new ListView(eventList);
 	var map = new MapView(eventList);
-
+	var selectedEvent = new EventView(eventList, '5a35366910dd9fc1e9eb03a2');
 	home.renderRecent(eventList);
 };
 

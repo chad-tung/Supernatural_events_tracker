@@ -2,10 +2,9 @@ var EventView = function(eventList, eventID){
   this.render(eventList, eventID);
 }
 
-var elementCreator = function(elementname, idname, classname, innerString) {
+var elementCreator = function(elementname, idname, innerString) {
   var item = document.createElement(elementname);
   item.id = idname;
-  item.classList.add(classname);
   item.innerText = innerString;
   return item;
 }
@@ -18,17 +17,17 @@ EventView.prototype = {
 
     eventList.forEach(function(event){
       if(event._id === eventID){
-        ul.appendChild(elementCreator('li', 'event-title', '', event.title))
-        ul.appendChild(elementCreator('li', 'event-date', '', event.date))
-        ul.appendChild(elementCreator('li', 'event-location', '', event.location))
-        ul.appendChild(elementCreator('li', 'event-type', '', event.type))
-        ul.appendChild(elementCreator('li', 'event-description', '', event.description))
-        ul.appendChild(elementCreator('li', 'event-image', '', event.image))
+        ul.appendChild(elementCreator('li', 'event-title', event.title))
+        ul.appendChild(elementCreator('li', 'event-date', event.date))
+        ul.appendChild(elementCreator('li', 'event-location', event.location))
+        ul.appendChild(elementCreator('li', 'event-type', event.type))
+        ul.appendChild(elementCreator('li', 'event-description', event.description))
+        ul.appendChild(elementCreator('li', 'event-image', event.image))
 
         if(event.author !== null || event.author !== ""){
-          ul.appendChild(elementCreator('li', 'event-author', '', event.author))
+          ul.appendChild(elementCreator('li', 'event-author', event.author))
         } else {
-          ul.appendChild(elementCreator('li', 'event-author', '', "Anonymous"))
+          ul.appendChild(elementCreator('li', 'event-author', "Anonymous"))
         }
 
       }
