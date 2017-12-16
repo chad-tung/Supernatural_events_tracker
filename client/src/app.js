@@ -1,5 +1,7 @@
 var FormView = require('./views/formView');
 var HomeView = require('./views/homeView');
+var ListView = require('./views/listView');
+
 
 var app = function() {
 	var url = "/api/events"
@@ -19,6 +21,7 @@ var requestComplete = function() {
   var eventList = JSON.parse(jsonString);
 	var home = new HomeView();
 	var form = new FormView();
+	var list = new ListView(eventList);
 	home.renderRecent(eventList);
 };
 

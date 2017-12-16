@@ -25,9 +25,9 @@ FormView.prototype = {
     inputTitle.name = 'title';
     inputTitle.placeholder = "Please enter a title";
 
-    // var inputDate = document.createElement('input');
-    // inputDate.type = 'date';
-    // inputDate.name = 'date';
+    var inputDate = document.createElement('input');
+    inputDate.type = 'date';
+    inputDate.name = 'date';
 
     var inputLat = document.createElement('input');
     inputLat.name = 'lat';
@@ -66,7 +66,7 @@ FormView.prototype = {
 
     form.appendChild(formTitle);
     form.appendChild(inputTitle);
-    // form.appendChild(inputDate);
+    form.appendChild(inputDate);
     form.appendChild(inputLat);
     form.appendChild(inputLng);
     form.appendChild(selectType);
