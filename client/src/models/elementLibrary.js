@@ -15,6 +15,13 @@ ElementLibrary.prototype = {
     element.id = idName;
     element.classList.add(className, className2);
     return element;
+  },
+  elementNamePlaceholderId: function(elementName, nameString, placeholderString, idName) {
+    var element = document.createElement(elementName);
+    element.name = nameString;
+    element.placeholder = placeholderString;
+    element.id = idName;
+    return element;
   }
 }
 
