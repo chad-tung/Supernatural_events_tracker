@@ -8,11 +8,11 @@ ElementLibrary.prototype = {
     element.id = idName;
     element.classList.add(className, className2);
   },
-  elementIdTextClass: function(elementName, idName, innerString, className) {
+  elementTextIdClass: function(elementName, innerString, idName, className) {
     var element = document.createElement(elementName);
+    element.innerText = innerString;
     element.id = idName;
     element.classList.add(className);
-    element.innerText = innerString;
   }
 }
 
