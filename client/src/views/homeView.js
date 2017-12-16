@@ -5,13 +5,6 @@ var HomeView = function() {
   this.render();
 }
 
-var elementCreator = function(elementname, idname, classname, classname2, innerString) {
-  var item = document.createElement(elementname);
-  item.id = idname;
-  item.classList.add(classname, classname2);
-  return item;
-}
-
 HomeView.prototype = {
   render: function() {
     var homepageDiv = document.getElementById('home-page');
@@ -45,7 +38,7 @@ HomeView.prototype = {
     for(var i=0; i < 3; i++) {
       var div = eLib.elementIdClass("div", `article-${i+1}`)
       var articleTitle = eLib.elementTextIdClass('h3', `${events[i].title}`)
-      
+
       div.appendChild(articleTitle);
       recentPosts.appendChild(div);
     };
