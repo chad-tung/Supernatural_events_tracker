@@ -86,3 +86,8 @@ h2 {
   padding-left: 30px;
   padding-right: 30px;
 }
+
+#main-map{
+  height:500px;
+  width:500px;
+}
