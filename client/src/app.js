@@ -3,6 +3,7 @@ var HomeView = require('./views/homeView');
 var ListView = require('./views/listView');
 var MapView = require('./views/mapView');
 var EventView = require('./views/eventView');
+var ClearPageDivs = require('./models/clearPageDivs');
 
 var app = function() {
 	var url = "/api/events"
@@ -26,6 +27,22 @@ var requestComplete = function() {
 	var map = new MapView(eventList);
 	var selectedEvent = new EventView(eventList, eventList[0]._id);
 	home.renderRecent(eventList);
+
+	var clear = new ClearPageDivs();
 };
 
 window.addEventListener("load", app);
+
+
+// var divs = document.getElementsByTagName('.page');
+
+
+// var divs = document.getElementsByTagName('.page');
+//
+// for(i=0; i<divs.length; i++){
+// 	removeChildNodes(divs.item(i))
+// }
+// var removeChildNodes = function(node){
+// while (node.hasChildNodes()) {
+// 	node.removeChild(node.lastChild);
+// }
