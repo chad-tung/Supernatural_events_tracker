@@ -3,8 +3,6 @@ var HomeView = require('./views/homeView');
 var ListView = require('./views/listView');
 var MapView = require('./views/mapView');
 
-
-
 var app = function() {
 	var url = "/api/events"
 	var articles = makeRequest(url, requestComplete);
@@ -24,7 +22,8 @@ var requestComplete = function() {
 	var home = new HomeView();
 	var form = new FormView();
 	var list = new ListView(eventList);
-	var map = new MapView(eventList)
+	var map = new MapView(eventList);
+
 	home.renderRecent(eventList);
 };
 
