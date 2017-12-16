@@ -1,4 +1,4 @@
-var ElementLibrary = require('../models/ElementLibrary');
+var ElementLibrary = require('../models/elementLibrary');
 
 
 var ListView = function(eventList) {

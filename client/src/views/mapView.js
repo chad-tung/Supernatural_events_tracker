@@ -1,4 +1,4 @@
-var MapWrapper = require('../models/MapWrapper');
+var MapWrapper = require('../models/mapWrapper');
 
 var MapView = function(eventList){
   this.render(eventList);

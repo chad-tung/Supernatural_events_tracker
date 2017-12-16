@@ -1,3 +1,5 @@
+var ElementLibrary = require('../models/elementLibrary');
+
 var HomeView = function() {
   this.render();
 }
