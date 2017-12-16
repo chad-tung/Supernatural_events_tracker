@@ -21,7 +21,6 @@ ListView.prototype = {
       eventListUL.appendChild(elementCreator('li', `${event._id}`, "event-li", event.title));
     })
 
-
   }
 }
 
