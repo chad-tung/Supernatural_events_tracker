@@ -1,5 +1,5 @@
-var ListView = function() {
-  this.render();
+var ListView = function(eventList) {
+  this.render(eventList);
 }
 
 
