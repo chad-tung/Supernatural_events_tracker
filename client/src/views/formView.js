@@ -1,4 +1,5 @@
 var ElementLibrary = require('../models/elementLibrary');
+var MapWrapper = require('../models/mapWrapper');
 
 var eLib = new ElementLibrary();
 var FormView = function() {
@@ -75,6 +76,15 @@ FormView.prototype = {
     form.appendChild(submitButton);
 
     body.appendChild(form);
+
+    var container = eLib.elementIdClass('div', 'form-map');
+    body.appendChild(container);
+    var coords = {lat: 55.3781, lng: -3.4360};
+    var zoom = 6;
+    var formMap = new MapWrapper(container, coords, zoom);
+    formMap.addClickEvent();
+
+
   }
 }
 
