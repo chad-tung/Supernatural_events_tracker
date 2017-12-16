@@ -24,7 +24,7 @@ var requestComplete = function() {
 	var form = new FormView();
 	var list = new ListView(eventList);
 	var map = new MapView(eventList);
-	var selectedEvent = new EventView(eventList, '5a35366910dd9fc1e9eb03a2');
+	var selectedEvent = new EventView(eventList, eventList[0]._id);
 	home.renderRecent(eventList);
 };
 
