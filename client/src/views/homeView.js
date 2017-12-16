@@ -2,7 +2,7 @@ var HomeView = function() {
   this.render();
 }
 
-var elementCreator = function(elementname, idname, classname, classname2) {
+var elementCreator = function(elementname, idname, classname, classname2, innerString) {
   var item = document.createElement(elementname);
   item.id = idname;
   item.classList.add(classname, classname2);
@@ -12,7 +12,7 @@ var elementCreator = function(elementname, idname, classname, classname2) {
 HomeView.prototype = {
   render: function() {
     var homepageDiv = document.getElementById('home-page');
-    var recent_posts = document.getElementById('recent-posts');
+    var recent_posts = elementCreator("div", "recent-posts", "section", "third")
 
     // var homeimageDiv = document.createElement('div');
     // homeimageDiv.id = "home-image";
@@ -39,6 +39,19 @@ HomeView.prototype = {
     homepageDiv.appendChild(aboutDiv);
     homepageDiv.appendChild(recent_posts);
 
+  },
+
+  renderRecent: function(events) {
+    recentPosts = document.getElementById('recent-posts');
+    events.reverse();
+    for(var i=0; i < 3; i++) {
+      var div = document.createElement('div');
+      div.id = `article-${i+1}`;
+      var articleTitle = document.createElement('h3');
+      articleTitle.innerText = events[i].title;
+      div.appendChild(articleTitle);
+      recentPosts.appendChild(div);
+    };
   }
 }
 

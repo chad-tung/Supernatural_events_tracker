@@ -2,14 +2,21 @@ var FormView = function() {
   this.render();
 }
 
+var elementCreator = function(elementname, idname, classname, classname2, innerString) {
+  var item = document.createElement(elementname);
+  item.id = idname;
+  item.classList.add(classname, classname2);
+  return item;
+}
+
 FormView.prototype = {
   render: function() {
     var body = document.getElementById('form-page');
 
     var form = document.createElement("form");
     form.id = "event-form";
-
-    console.log('this is rendering kind of');
+    form.method = "POST";
+    form.action = "/event-form"
 
     var formTitle = document.createElement('h2');
     formTitle.innerText = "Event Form";
@@ -53,6 +60,10 @@ FormView.prototype = {
     inputAuthor.name = 'author';
     inputAuthor.placeholder = "Please tell us your name. If you wish to remain anonymous, leave this blank.";
 
+    var submitButton = document.createElement('button');
+    submitButton.type = 'submit';
+    submitButton.innerText = "Submit";
+
     form.appendChild(formTitle);
     form.appendChild(inputTitle);
     // form.appendChild(inputDate);
@@ -62,6 +73,7 @@ FormView.prototype = {
     form.appendChild(inputDescription);
     form.appendChild(inputImage);
     form.appendChild(inputAuthor);
+    form.appendChild(submitButton);
 
     body.appendChild(form);
   }
