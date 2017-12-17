@@ -18,6 +18,9 @@ MapView.prototype = {
     eventList.forEach(function(event){
       map.addMarker(event.location)
     })
+
+    map.setMarkersInfo(eventList);
+
   }
 }
 

@@ -12,7 +12,6 @@ MapWrapper.prototype.addMarker = function(coords) {
     map: this.googleMap
   });
   // I don't know why, but I need the line below for the previous marker to disappear...
-  this.setMarkerInfo(marker)
   this.markers.push(marker);
 };
 
@@ -31,10 +30,10 @@ MapWrapper.prototype.addClickEvent = function() {
 
   google.maps.event.addListener(this.googleMap,
   'click', function(event) {
+    console.log(event);
     this.clearMarkers();
     var coord = {lat: event.latLng.lat(), lng: event.latLng.lng()}
     this.addMarker(coord)
-    console.log(coord);
     var latInput = document.getElementById('lat-input');
     var lngInput = document.getElementById('lng-input');
     latInput.value = coord.lat;
@@ -42,14 +41,23 @@ MapWrapper.prototype.addClickEvent = function() {
   }.bind(this));
 };
 
-MapWrapper.prototype.setMarkerInfo = function(marker){
-    var infoWindow = new google.maps.InfoWindow({
-        content: "Interesting Information!"
-    });
+MapWrapper.prototype.setMarkersInfo = function(eventList){
+    this.markers.forEach(function(marker){
+      var coords = {lat: marker.getPosition().lat(), lng: marker.getPosition().lng()};
+      console.log(coords);
+      for (i = 0; i < eventList.length; i++){
+        if(coords.lat === eventList[i].location.lat && coords.lng === eventList[i].location.lng){
+          var infoWindow = new google.maps.InfoWindow({
+              content: `${eventList[i].title}`
+          });
 
-    marker.addListener('click', function(){
-        infoWindow.open(this.googleMap, marker);
-    });
+          marker.addListener('click', function(){
+              infoWindow.open(this.googleMap, marker);
+          });
+      }
+
+      }
+    })
 }
 
 
