@@ -77,6 +77,17 @@ h2 {
    margin: 15px;
 }
 
+.marker-image {
+  max-height: 100px;
+}
+
+.marker-info{
+  display: flex;
+  flex-direction: column;
+  background-color: tomato;
+
+}
+
 #event-form {
   display: flex;
   flex-direction: column;
