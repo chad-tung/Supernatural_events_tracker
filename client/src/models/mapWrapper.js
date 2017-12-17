@@ -34,7 +34,10 @@ MapWrapper.prototype.addClickEvent = function() {
     var coord = {lat: event.latLng.lat(), lng: event.latLng.lng()}
     this.addMarker(coord)
     console.log(coord);
-    console.log(this.markers);
+    var latInput = document.getElementById('lat-input');
+    var lngInput = document.getElementById('lng-input');
+    latInput.value = coord.lat;
+    lngInput.value = coord.lng;
   }.bind(this));
 };
 
