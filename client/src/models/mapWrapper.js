@@ -11,6 +11,38 @@ MapWrapper.prototype.addMarker = function(coords) {
     position: coords,
     map: this.googleMap
   });
+  // I don't know why, but I need the line below for the previous marker to disappear...
+  this.markers.push(marker);
+};
+
+MapWrapper.prototype.setMapOnAll = function(map) {
+  for (var i = 0; i < this.markers.length; i++) {
+    this.markers[i].setMap(map);
+  }
 }
+
+MapWrapper.prototype.clearMarkers = function() {
+  this.setMapOnAll(null);
+  this.markers = [];
+}
+
+MapWrapper.prototype.addClickEvent = function() {
+
+  google.maps.event.addListener(this.googleMap,
+  'click', function(event) {
+    this.clearMarkers();
+    var coord = {lat: event.latLng.lat(), lng: event.latLng.lng()}
+    this.addMarker(coord)
+    console.log(coord);
+    var latInput = document.getElementById('lat-input');
+    var lngInput = document.getElementById('lng-input');
+    latInput.value = coord.lat;
+    lngInput.value = coord.lng;
+  }.bind(this));
+};
+
+
+
+
 
 module.exports = MapWrapper;
