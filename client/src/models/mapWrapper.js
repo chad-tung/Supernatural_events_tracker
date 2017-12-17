@@ -7,11 +7,7 @@ var MapWrapper = function (container, coords, zoom) {
 }
 
 MapWrapper.prototype.addMarker = function(coords) {
-  // This is a wee hack, bound to cause issues...
-  var newLat = parseFloat(coords.lat);
-  var newLng = parseFloat(coords.lng);
-  coords.lat = newLat;
-  coords.lng = newLng;
+
   var marker = new google.maps.Marker({
     position: coords,
     map: this.googleMap
@@ -53,7 +49,7 @@ MapWrapper.prototype.setMarkersInfo = function(eventList){
       var coords = {lat: marker.getPosition().lat(), lng: marker.getPosition().lng()};
 
       for (i = 0; i < eventList.length; i++){
-        if(coords.lat === parseFloat(eventList[i].location.lat) && coords.lng === parseFloat(eventList[i].location.lng)){
+        if(coords.lat === eventList[i].location.lat && coords.lng === eventList[i].location.lng){
           var infoWindow = new google.maps.InfoWindow({
               content: `<DIV CLASS="marker-info"> ${eventList[i].title} <IMG BORDER="0" ALIGN="Center" CLASS="marker-image" SRC="${eventList[i].image}"/></DIV>`
           });
