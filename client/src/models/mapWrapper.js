@@ -32,7 +32,7 @@ MapWrapper.prototype.addClickEvent = function() {
   'click', function(event) {
     console.log(event);
     this.clearMarkers();
-    var coord = {lat: event.latLng.lat(), lng: event.latLng.lng()}
+    var coord = {lat: event.latLng.lat().toFixed(7), lng: event.latLng.lng().toFixed(7)}
     this.addMarker(coord)
     var latInput = document.getElementById('lat-input');
     var lngInput = document.getElementById('lng-input');
