@@ -1,3 +1,6 @@
+var ElementLibrary = require('../models/elementLibrary');
+
+var eLib = new ElementLibrary();
 var FormView = function() {
   this.render();
 }
@@ -18,51 +21,47 @@ FormView.prototype = {
     form.method = "POST";
     form.action = "/event-form"
 
-    var formTitle = document.createElement('h2');
-    formTitle.innerText = "Event Form";
+    var formTitle = eLib.elementTextIdClass("h2", "Event Form");
+    // document.createElement('h2');
+    // formTitle.innerText = "Event Form";
 
-    var inputTitle = document.createElement('input');
-    inputTitle.name = 'title';
-    inputTitle.placeholder = "Please enter a title";
+    var inputTitle = eLib.elementNamePlaceholderId('input', 'title', 'Please enter a title');
+    // inputTitle.name = 'title';
+    // inputTitle.placeholder = "Please enter a title";
 
-    var inputDate = document.createElement('input');
+    var inputDate = eLib.elementNamePlaceholderId('input', 'date');
     inputDate.type = 'date';
-    inputDate.name = 'date';
 
-    var inputLat = document.createElement('input');
-    inputLat.name = 'lat';
-    inputLat.placeholder = "Please enter the Latitude";
+    var inputLat = eLib.elementNamePlaceholderId('input', 'lat', 'Please enter the Latitude');
 
-    var inputLng = document.createElement('input');
-    inputLng.name = 'lng';
-    inputLng.placeholder ="Please enter the Longitude";
+    var inputLng = eLib.elementNamePlaceholderId('input', 'lng', 'Please enter the Longitude');
 
-    var selectType = document.createElement('select');
-    selectType.name = 'type';
+    var selectType = eLib.elementNamePlaceholderId('select', 'type');
     var typeArr = ["UFO", "Ghost", "Cryptid", "Unidentified"];
 
     typeArr.forEach(function(type) {
-      var option = document.createElement('option');
-      option.innerText = type;
+      var option = eLib.elementTextIdClass('option', `${type}`);
       selectType.appendChild(option);
     });
 
-    var inputDescription = document.createElement('input');
-    inputDescription.id = "form-description";
-    inputDescription.name = "description";
-    inputDescription.placeholder = "Please describe what you witnessed, fellow paranormal hunter.";
+    var inputDescription = eLib.elementNamePlaceholderId('input', 'description', 'Please describe what you witnessed', 'form-description');
+    // document.createElement('input');
+    // inputDescription.id = "form-description";
+    // inputDescription.name = "description";
+    // inputDescription.placeholder = "Please describe what you witnessed, fellow paranormal hunter.";
 
-    var inputImage = document.createElement('input');
-    inputImage.name = "image";
-    inputImage.placeholder = "Paste image url";
+    var inputImage = eLib.elementNamePlaceholderId('input', 'image', 'Paste image url');
+    // document.createElement('input');
+    // inputImage.name = "image";
+    // inputImage.placeholder = "Paste image url";
 
-    var inputAuthor = document.createElement('input');
-    inputAuthor.name = 'author';
-    inputAuthor.placeholder = "Please tell us your name. If you wish to remain anonymous, leave this blank.";
+    var inputAuthor = eLib.elementNamePlaceholderId('input', 'author', 'Please tell us your name. If you wish to remain anonymous, leave this blank.');
+    // document.createElement('input');
+    // inputAuthor.name = 'author';
+    // inputAuthor.placeholder = "Please tell us your name. If you wish to remain anonymous, leave this blank.";
 
-    var submitButton = document.createElement('button');
+    var submitButton = eLib.elementTextIdClass('button', 'Submit');
     submitButton.type = 'submit';
-    submitButton.innerText = "Submit";
 
     form.appendChild(formTitle);
     form.appendChild(inputTitle);

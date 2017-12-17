@@ -28,7 +28,7 @@ var requestComplete = function() {
 	var selectedEvent = new EventView(eventList, eventList[0]._id);
 	home.renderRecent(eventList);
 
-	var clear = new ClearPageDivs();
+	// var clear = new ClearPageDivs();
 };
 
 window.addEventListener("load", app);
