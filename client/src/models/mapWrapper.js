@@ -61,14 +61,15 @@ MapWrapper.prototype.setMarkersInfo = function(eventList){
           lastOpened = infoWindow;
           infoWindow.open(this.googleMap, marker);
           })
+
+          //ADD THIS TO EACH MARKER
+          // infoWindow.addListener('click', function(){
+              //when clicked, open individual view of event
+          // });
         }
     }
   })
 }
 
-//ADD THIS TO FOR EACH MARKER
 
-// infoWindow.addListener('click', function(){
-    //when clicked, open individual view of event
-// });
 module.exports = MapWrapper;
