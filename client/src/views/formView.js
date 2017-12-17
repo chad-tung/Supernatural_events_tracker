@@ -29,9 +29,9 @@ FormView.prototype = {
     var inputDate = eLib.elementNamePlaceholderId('input', 'date');
     inputDate.type = 'date';
 
-    var inputLat = eLib.elementNamePlaceholderId('input', 'lat', 'Please click on the map to set lat', 'lat-input');
+    var inputLat = eLib.elementNamePlaceholderId('input', 'location[lat]', 'Please click on the map to set lat', 'lat-input');
 
-    var inputLng = eLib.elementNamePlaceholderId('input', 'lng', 'Please click on the map to set lng', 'lng-input');
+    var inputLng = eLib.elementNamePlaceholderId('input', 'location[lng]', 'Please click on the map to set lng', 'lng-input');
 
     var selectType = eLib.elementNamePlaceholderId('select', 'type');
     var typeArr = ["UFO", "Ghost", "Cryptid", "Unidentified"];
