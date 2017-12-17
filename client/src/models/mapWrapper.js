@@ -7,6 +7,11 @@ var MapWrapper = function (container, coords, zoom) {
 }
 
 MapWrapper.prototype.addMarker = function(coords) {
+  // This is a wee hack, bound to cause issues...
+  var newLat = parseFloat(coords.lat);
+  var newLng = parseFloat(coords.lng);
+  coords.lat = newLat;
+  coords.lng = newLng;
   var marker = new google.maps.Marker({
     position: coords,
     map: this.googleMap
@@ -32,12 +37,12 @@ MapWrapper.prototype.addClickEvent = function() {
   'click', function(event) {
     console.log(event);
     this.clearMarkers();
-    var coord = {lat: event.latLng.lat().toFixed(7), lng: event.latLng.lng().toFixed(7)}
+    var coord = {lat: event.latLng.lat(), lng: event.latLng.lng()}
     this.addMarker(coord)
     var latInput = document.getElementById('lat-input');
     var lngInput = document.getElementById('lng-input');
-    latInput.value = coord.lat;
-    lngInput.value = coord.lng;
+    latInput.value = coord.lat.toFixed(7);
+    lngInput.value = coord.lng.toFixed(7);
   }.bind(this));
 };
 
@@ -48,7 +53,7 @@ MapWrapper.prototype.setMarkersInfo = function(eventList){
       var coords = {lat: marker.getPosition().lat(), lng: marker.getPosition().lng()};
 
       for (i = 0; i < eventList.length; i++){
-        if(coords.lat === eventList[i].location.lat && coords.lng === eventList[i].location.lng){
+        if(coords.lat === parseFloat(eventList[i].location.lat) && coords.lng === parseFloat(eventList[i].location.lng)){
           var infoWindow = new google.maps.InfoWindow({
               content: `<DIV CLASS="marker-info"> ${eventList[i].title} <IMG BORDER="0" ALIGN="Center" CLASS="marker-image" SRC="${eventList[i].image}"/></DIV>`
           });
