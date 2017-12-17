@@ -47,8 +47,12 @@ MapWrapper.prototype.setMarkersInfo = function(eventList){
       for (i = 0; i < eventList.length; i++){
         if(coords.lat === eventList[i].location.lat && coords.lng === eventList[i].location.lng){
           var infoWindow = new google.maps.InfoWindow({
-              content: `<DIV CLASS="marker-info">${eventList[i].title} <IMG BORDER="0" ALIGN="Center" CLASS="marker-image" SRC="${eventList[i].image}"</DIV>`
+              content: `<DIV CLASS="marker-info"> ${eventList[i].title} <IMG BORDER="0" ALIGN="Center" CLASS="marker-image" SRC="${eventList[i].image}"/></DIV>`
           });
+
+          // infoWindow.addListener('click', function(){
+            //when clicked, open individual view of event
+          // });
 
           marker.addListener('click', function(){
               infoWindow.open(this.googleMap, marker);
@@ -61,27 +65,3 @@ MapWrapper.prototype.setMarkersInfo = function(eventList){
 
 
 module.exports = MapWrapper;
-
-
-// Conversation -
-
-// Looks good.
-//
-//
-// me and chad tried this earlier and it was an absolute mess haha i was deleting his code everywhere
-//
-// Haha.  Just stick with one person typing then eh.
-//
-// so one thing I am wondering here.. does <DIV CLASS> need to be within quotation marks? and </DIV>
-//
-// Id say, just copy exactly the format you have for the img tags
-//
-// Hmm..  yeah see what you mean...
-
-//Some ugly looking code there..
-
-//  Not the prettiest.  Does it work though?
-
-//Lets find out.
-
-// Maybe give
