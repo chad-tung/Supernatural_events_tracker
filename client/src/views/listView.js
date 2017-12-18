@@ -9,6 +9,8 @@ ListView.prototype = {
   render: function(eventList){
     var eventListPage = document.getElementById('event-list-page');
     var eventListUL = document.createElement('ul');
+    eventListUL.id = 'event-list-ul';
+    
     eventListPage.appendChild(eventListUL);
 
     eventList.forEach(function(event){
