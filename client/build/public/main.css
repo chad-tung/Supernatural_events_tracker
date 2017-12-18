@@ -184,3 +184,9 @@ h2 {
   padding: 15px;
   text-align: center;
 }
+
+#instruction-and-map{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
