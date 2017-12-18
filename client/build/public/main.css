@@ -114,6 +114,9 @@ h2 {
 .event-image{
   width: 200px;
   height: 100px;
+  padding:10px;
+  border-style: solid;
+  border: 5px;
 }
 
 .event-container{
