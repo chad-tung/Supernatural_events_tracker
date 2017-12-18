@@ -8,20 +8,54 @@ var ListView = function(eventList) {
 ListView.prototype = {
   render: function(eventList){
     var eventListPage = document.getElementById('event-list-page');
-    var selectType = eLib.elementNamePlaceholderId('select', 'type');
-    var typeArr = ["UFO", "Ghost", "Cryptid", "Unidentified"];
+
+    var filterType = eLib.elementNamePlaceholderId('select', 'type');
+    var typeArr = ["All", "UFO", "Ghost", "Cryptid", "Unidentified"];
+
     typeArr.forEach(function(type) {
       var option = eLib.elementTextIdClass('option', `${type}`);
-      selectType.appendChild(option);
+      filterType.appendChild(option);
     });
 
+    eventListPage.appendChild(filterType);
     var eventListUL = document.createElement('ul');
+    eventListUL.id = 'event-list-ul'
     eventListPage.appendChild(eventListUL);
 
     eventList.forEach(function(event){
       eventListUL.appendChild(eLib.elementTextIdClass("li", event.title, `${event._id}`, "event-li"));
     })
+
+    filterType.addEventListener('change', function() {
+      var selection = typeArr[filterType.selectedIndex];
+      if (selection == "All") {
+        this.removeChildNodes(eventListUL);
+        eventList.forEach(function(event){
+          eventListUL.appendChild(eLib.elementTextIdClass("li", event.title, `${event._id}`, "event-li"))
+        })
+      }
+      else {
+        this.renderFilter(eventList, String(selection))
+      }
+    }.bind(this));
+  },
+
+  renderFilter: function(eventList, typeSelected) {
+    var eventListUL = document.getElementById('event-list-ul');
+    this.removeChildNodes(eventListUL);
+
+    eventList.forEach(function(item) {
+      if (item.type == typeSelected) {
+        eventListUL.appendChild(eLib.elementTextIdClass("li", item.title, `${item._id}`, "event-li"));
+      }
+    });
+  },
+  removeChildNodes: function(node){
+    while (node.hasChildNodes()) {
+      node.removeChild(node.lastChild);
+    }
   }
 }
+
 
 module.exports = ListView;
