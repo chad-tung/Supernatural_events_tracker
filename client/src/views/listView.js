@@ -25,16 +25,8 @@ ListView.prototype = {
     eventListPage.appendChild(eventListUL);
 
     eventList.forEach(function(event){
-      var container = document.createElement('div');
-      container.classList.add("event-container");
-
-      container.appendChild(eLib.elementTextIdClass("li", event.date, `${event._id}`, "event-li"));
-      container.appendChild(eLib.elementTextIdClass("li", event.title, `${event._id}`, "event-li"));
-      var img = eLib.elementTextIdClass("img", event.image, `${event._id}`, "event-image");
-      img.src = event.image;
-      container.appendChild(img);
-      eventListUL.appendChild(container);
-    })
+      this.renderIndividual(event, eventListUL);
+    }.bind(this))
 
     filterType.addEventListener('change', function() {
       var selection = typeArr[filterType.selectedIndex];
@@ -54,18 +46,22 @@ ListView.prototype = {
 
     eventList.forEach(function(event){
       if (event.type == typeSelected) {
-        var container = document.createElement('div');
-        container.classList.add("event-container");
-
-        container.appendChild(eLib.elementTextIdClass("li", event.date, `${event._id}`, "event-li"));
-        container.appendChild(eLib.elementTextIdClass("li", event.title, `${event._id}`, "event-li"));
-        var img = eLib.elementTextIdClass("img", event.image, `${event._id}`, "event-image");
-        img.src = event.image;
-        container.appendChild(img);
-        eventListUL.appendChild(container);
+        this.renderIndividual(event, eventListUL);
       }
-    })
+    }.bind(this));
   },
+
+  renderIndividual: function(item, parentDiv) {
+    var container = document.createElement('div');
+    container.classList.add("event-container");
+    container.appendChild(eLib.elementTextIdClass("li", item.date, `${item._id}`, "event-li"));
+    container.appendChild(eLib.elementTextIdClass("li", item.title, `${item._id}`, "event-li"));
+    var img = eLib.elementTextIdClass("img", item.image, `${item._id}`, "event-image");
+    img.src = item.image;
+    container.appendChild(img);
+    parentDiv.appendChild(container);
+  },
+
   removeChildNodes: function(node){
     while (node.hasChildNodes()) {
       node.removeChild(node.lastChild);
