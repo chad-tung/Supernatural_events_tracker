@@ -39,10 +39,8 @@ ListView.prototype = {
     filterType.addEventListener('change', function() {
       var selection = typeArr[filterType.selectedIndex];
       if (selection == "All") {
-        this.removeChildNodes(eventListUL);
-        eventList.forEach(function(event){
-          eventListUL.appendChild(eLib.elementTextIdClass("li", event.title, `${event._id}`, "event-li"))
-        })
+        this.removeChildNodes(eventListPage)
+        this.render(eventList);
       }
       else {
         this.renderFilter(eventList, String(selection))
@@ -54,11 +52,19 @@ ListView.prototype = {
     var eventListUL = document.getElementById('event-list-ul');
     this.removeChildNodes(eventListUL);
 
-    eventList.forEach(function(item) {
-      if (item.type == typeSelected) {
-        eventListUL.appendChild(eLib.elementTextIdClass("li", item.title, `${item._id}`, "event-li"));
+    eventList.forEach(function(event){
+      if (event.type == typeSelected) {
+        var container = document.createElement('div');
+        container.classList.add("event-container");
+
+        container.appendChild(eLib.elementTextIdClass("li", event.date, `${event._id}`, "event-li"));
+        container.appendChild(eLib.elementTextIdClass("li", event.title, `${event._id}`, "event-li"));
+        var img = eLib.elementTextIdClass("img", event.image, `${event._id}`, "event-image");
+        img.src = event.image;
+        container.appendChild(img);
+        eventListUL.appendChild(container);
       }
-    });
+    })
   },
   removeChildNodes: function(node){
     while (node.hasChildNodes()) {
