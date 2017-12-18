@@ -36,7 +36,7 @@ HomeView.prototype = {
     recentPosts = document.getElementById('recent-posts');
     events.reverse();
     for(var i=0; i < 3; i++) {
-      var div = eLib.elementIdClass("div", `article-${i+1}`);
+      var div = eLib.elementIdClass("div", `${events[i]._id}`, "recent-articles");
       var articleTitle = eLib.elementTextIdClass('h3', `${events[i].title}`);
       div.setAttribute("style", `background: url(${events[i].image})`);
       div.appendChild(articleTitle);

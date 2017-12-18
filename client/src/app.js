@@ -57,6 +57,14 @@ var loadHome = function(eventList) {
 	var home = new HomeView();
 	attachNav(eventList);
 	home.renderRecent(eventList);
+
+	var recentEvents = document.getElementsByClassName('recent-articles')
+
+	for(var i=0; i<recentEvents.length;i++){
+		recentEvents[i].addEventListener('click', function(){
+			loadSingleEvent(eventList, this.id)
+		})
+	}
 };
 
 var loadForm = function(eventList) {
@@ -70,7 +78,6 @@ var loadList = function(eventList) {
 	attachNav(eventList);
 	var list = new ListView(eventList);
 	var listOfEvents = document.getElementsByClassName('event-li');
-				console.log(listOfEvents);
 	for (var i=0; i < listOfEvents.length; i++) {
 		listOfEvents[i].addEventListener('click', function() {
 			loadSingleEvent(eventList, this.id)

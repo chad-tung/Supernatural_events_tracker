@@ -93,7 +93,7 @@ h2 {
    margin: 15px;
 }
 
-#article-1, #article-2, #article-3 {
+.recent-articles {
   height: 200px;
   width: 200px;
   background: grey;
