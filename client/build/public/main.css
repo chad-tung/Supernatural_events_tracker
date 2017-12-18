@@ -124,6 +124,19 @@ h2 {
   margin-bottom: 10px;
 }
 
+#event-image{
+  height: 190px;
+  width: 500px;
+  border: 1px;
+  border-style: solid;
+}
+
+#map-and-img{
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
 #events-list-page, #form-page {
   padding-left: 30px;
   padding-right: 30px;
@@ -158,13 +171,16 @@ h2 {
 
 #event-item-page ul {
   flex-direction: column;
+  align-items: center;
 }
 #event-item-page li, #event-list-page li {
   border: 1px solid grey;
   border-radius: 2px;
   margin-bottom: 10px;
   background-color: #EEE;
+  width: 600px;
   max-width: 600px;
   margin-right: 5px;
-  padding: 5px;
+  padding: 15px;
+  text-align: center;
 }
