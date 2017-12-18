@@ -52,7 +52,7 @@ MapWrapper.prototype.setMarkersInfo = function(eventList){
       for (i = 0; i < eventList.length; i++){
         if(coords.lat === eventList[i].location.lat && coords.lng === eventList[i].location.lng){
           var infoWindow = new google.maps.InfoWindow({
-              content: `<DIV ID="${eventList[i]._id}" CLASS="marker-info"> ${eventList[i].title} <IMG BORDER="0" ALIGN="Center" CLASS="marker-image" SRC="${eventList[i].image}"/></DIV>`
+              content: `<DIV ID="${eventList[i]._id}" CLASS="marker-info"> ${eventList[i].title} <IMG BORDER="0" ALIGN="Center" CLASS="marker-image" SRC="${eventList[i].image}"/> Click to read more</DIV>`
           });
 
           marker.addListener('click', function(){
