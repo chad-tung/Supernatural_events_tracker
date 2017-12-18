@@ -98,9 +98,11 @@ var loadMap = function(eventList) {
 
 	main_map.addEventListener('click', function() {
 		var markerWindows = document.getElementsByClassName('marker-info');
-		markerWindows[0].addEventListener('click', function(){
-			loadSingleEvent(eventList, this.id);
-		})
+		if(markerWindows.length > 0){
+			markerWindows[0].addEventListener('click', function(){
+				loadSingleEvent(eventList, this.id);
+			})
+		}
 	})
 };
 
