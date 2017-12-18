@@ -76,7 +76,9 @@ MapWrapper.prototype.setMarkersInfo = function(eventList){
 MapWrapper.prototype.findMe = function(){
     navigator.geolocation.getCurrentPosition(function(position) {
         var currentPos = ({lat: position.coords.latitude, lng: position.coords.longitude})
+        this.googleMap.setZoom(14);
         this.googleMap.setCenter(currentPos);
+        this.addMarker(currentPos);
     }.bind(this))
 }
 

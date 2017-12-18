@@ -25,7 +25,6 @@ MapView.prototype = {
     geoButton.innerText = "Find me";
     geoButton.addEventListener("click", map.findMe.bind(map));
     mapPage.appendChild(geoButton)
-
   }
 }
 
