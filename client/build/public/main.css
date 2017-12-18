@@ -125,8 +125,10 @@ h2 {
 }
 
 #event-image{
-  height: 200px;
+  height: 190px;
   width: 500px;
+  border: 1px;
+  border-style: solid;
 }
 
 #map-and-img{
