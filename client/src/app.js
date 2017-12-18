@@ -57,6 +57,14 @@ var loadHome = function(eventList) {
 	var home = new HomeView();
 	attachNav(eventList);
 	home.renderRecent(eventList);
+
+	var recentEvents = document.getElementsByClassName('recent-articles')
+
+	for(var i=0; i<recentEvents.length;i++){
+		recentEvents[i].addEventListener('click', function(){
+			loadSingleEvent(eventList, this.id)
+		})
+	}
 };
 
 var loadForm = function(eventList) {
@@ -70,7 +78,6 @@ var loadList = function(eventList) {
 	attachNav(eventList);
 	var list = new ListView(eventList);
 	var listOfEvents = document.getElementsByClassName('event-li');
-				console.log(listOfEvents);
 	for (var i=0; i < listOfEvents.length; i++) {
 		listOfEvents[i].addEventListener('click', function() {
 			loadSingleEvent(eventList, this.id)
@@ -97,20 +104,4 @@ var loadSingleEvent = function(eventList, eventId) {
 	var selectedEvent = new EventView(eventList, eventId);
 }
 
-// grab all the divs that have the class singleview, and put them into an array. Look through, and for every one, add a click listener, which redirects them to the loadSingleEvent page, which will take and parse to int the ID of the div, and search the database for it.
-
 window.addEventListener("load", app);
-
-
-// var divs = document.getElementsByTagName('.page');
-
-
-// var divs = document.getElementsByTagName('.page');
-//
-// for(i=0; i<divs.length; i++){
-// 	removeChildNodes(divs.item(i))
-// }
-// var removeChildNodes = function(node){
-// while (node.hasChildNodes()) {
-// 	node.removeChild(node.lastChild);
-// }
