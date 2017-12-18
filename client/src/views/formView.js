@@ -6,13 +6,6 @@ var FormView = function() {
   this.render();
 }
 
-var elementCreator = function(elementname, idname, classname, classname2, innerString) {
-  var item = document.createElement(elementname);
-  item.id = idname;
-  item.classList.add(classname, classname2);
-  return item;
-}
-
 FormView.prototype = {
   render: function() {
     var body = document.getElementById('form-page');
