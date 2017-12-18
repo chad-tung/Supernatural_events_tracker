@@ -77,12 +77,17 @@ var loadList = function(eventList) {
 	clearPage();
 	attachNav(eventList);
 	var list = new ListView(eventList);
-	var listOfEvents = document.getElementsByClassName('event-li');
-	for (var i=0; i < listOfEvents.length; i++) {
-		listOfEvents[i].addEventListener('click', function() {
-			loadSingleEvent(eventList, this.id)
-		})
+	var addListeners = function() {
+		var listOfEvents = document.getElementsByClassName('event-li');
+		for (var i=0; i < listOfEvents.length; i++) {
+			listOfEvents[i].addEventListener('click', function() {
+				loadSingleEvent(eventList, this.id)
+			})
+		}
 	}
+	addListeners();
+	var select = document.getElementById('select-filter');
+	select.addEventListener('change', addListeners);
 };
 
 var loadMap = function(eventList) {
