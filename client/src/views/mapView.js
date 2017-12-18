@@ -21,6 +21,11 @@ MapView.prototype = {
 
     map.setMarkersInfo(eventList);
 
+    var geoButton = document.createElement('button');
+    geoButton.innerText = "Find me";
+    geoButton.addEventListener("click", map.findMe.bind(map));
+    mapPage.appendChild(geoButton)
+
   }
 }
 

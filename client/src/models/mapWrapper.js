@@ -77,7 +77,6 @@ MapWrapper.prototype.findMe = function(){
     navigator.geolocation.getCurrentPosition(function(position) {
         var currentPos = ({lat: position.coords.latitude, lng: position.coords.longitude})
         this.googleMap.setCenter(currentPos);
-        console.log(currentPos);
     }.bind(this))
 }
 
