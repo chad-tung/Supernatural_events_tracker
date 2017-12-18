@@ -10,7 +10,7 @@ db.events.insert({
     lng: -4.849224000000049
   },
   type: "UFO",
-  description: "I was oout for a walk with my dog and saw a glowing ball of light hovering about 100 metres above me. It hung there for about 5 minutes and then zoomed off to the north",
+  description: "I was out for a walk with my dog and saw a glowing ball of light hovering about 100 metres above me. It hung there for about 5 minutes and then zoomed off to the north",
   image:"http://vvng.victorvalleynews.netdna-cdn.com/wp-content/uploads/2015/12/strange-light-in-the-sky.jpg",
   author: "skeptic236"
 });
@@ -50,7 +50,7 @@ db.events.insert({
   },
   type: "Ghost",
   description: "I am an SPT employee, but I can't give you any more details, in case I lose my job. I was carrying out some routine maintenance of the outer tunnel near West Street station, when I saw something terrible. I had turned around, and this kid appeared out of the shadows further down the tunnel, and at first I thought it was a ned playing silly games. I shouted out asking what the hell he was doing down there, when it turned around, I realised something was wrong with his face, as it was distorted and animal like. He appeared to be gnawing on something, it looked like raw meat. As I stepped back in horror, he disappeared. I don't know what I saw, and I can't tell anyone at work, as they'd all think I'd lost my marbles. ",
-  image:"http://www.therailengineer.com/wp-content/uploads/Clockwork-Orange-04.jpg",
+  image:"http://www.spt.co.uk/corporate/wp-content/uploads/2012/03/120329_tunnels-687x338.jpg",
   author:"nessiespotter"
 });
 
