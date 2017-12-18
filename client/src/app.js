@@ -82,6 +82,14 @@ var loadMap = function(eventList) {
 	clearPage();
 	attachNav(eventList);
 	var map = new MapView(eventList);
+	var main_map = document.getElementById('main-map');
+
+	main_map.addEventListener('click', function() {
+		var markerWindows = document.getElementsByClassName('marker-info');
+		markerWindows[0].addEventListener('click', function(){
+			loadSingleEvent(eventList, this.id);
+		})
+	})
 };
 
 var loadSingleEvent = function(eventList, eventId) {
