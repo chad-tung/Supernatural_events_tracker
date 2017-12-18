@@ -22,15 +22,6 @@ var requestComplete = function() {
   var jsonString = this.responseText;
   var eventList = JSON.parse(jsonString);
 	loadHome(eventList);
-	// loadForm();
-	// var home = new HomeView();
-	// var form = new FormView();
-	// var list = new ListView(eventList);
-	// var map = new MapView(eventList);
-	// var selectedEvent = new EventView(eventList, eventList[0]._id);
-	// home.renderRecent(eventList);
-
-	// var clear = new ClearPageDivs();
 };
 
 var attachNav = function(eventList) {
@@ -78,6 +69,13 @@ var loadList = function(eventList) {
 	clearPage();
 	attachNav(eventList);
 	var list = new ListView(eventList);
+	var listOfEvents = document.getElementsByClassName('event-li');
+				console.log(listOfEvents);
+	for (var i=0; i < listOfEvents.length; i++) {
+		listOfEvents[i].addEventListener('click', function() {
+			loadSingleEvent(eventList, this.id)
+		})
+	}
 };
 
 var loadMap = function(eventList) {
@@ -86,9 +84,9 @@ var loadMap = function(eventList) {
 	var map = new MapView(eventList);
 };
 
-var loadSingleEvent = function() {
+var loadSingleEvent = function(eventList, eventId) {
 	clearPage();
-	var selectedEvent = new EventView(eventList, eventList[0]._id);
+	var selectedEvent = new EventView(eventList, eventId);
 }
 
 // grab all the divs that have the class singleview, and put them into an array. Look through, and for every one, add a click listener, which redirects them to the loadSingleEvent page, which will take and parse to int the ID of the div, and search the database for it.
