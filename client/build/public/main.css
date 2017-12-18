@@ -116,6 +116,11 @@ h2 {
   height: 100px;
 }
 
+.event-container{
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
 .marker-info{
   display: flex;
   flex-direction: column;
@@ -183,6 +188,7 @@ h2 {
 
 #event-item-page ul {
   align-items: center;
+  flex-direction: column;
 }
 
 #event-item-page li, #event-list-page li {
