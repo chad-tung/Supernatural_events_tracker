@@ -55,15 +55,15 @@ db.events.insert({
 });
 
 db.events.insert({
-"_id": "5a36cb72948956336935b7ed",
-"title": "Zombie encounter",
-"date": "2017-12-07",
-"location": {
-"lat": 55.8891761,
-"lng": -3.164625000000001
-},
-"type": "Unidentified",
-"description": "Now I've been scared before, but this was a completely different level. I was just enjoying my walk in the dark, when I started to hear some noises nearby in the bushes. Intrigued, I went to have a look, and to my shock and horror, I saw a woman eating a man's face! Here's an image of her just as she got ready to make me her next meal. Safe to say I will stick to the morning for my walks!",
-"image": "https://vignette.wikia.nocookie.net/recsaga/images/4/45/Sra._Izquierdo.jpg/revision/latest?cb=20130803060229&path-prefix=es",
-"author": ""
+  _id: "5a36cb72948956336935b7ed",
+  title: "Zombie encounter",
+  date: "2017-12-07",
+  location: {
+    lat: 55.8891761,
+    lng: -3.164625000000001
+  },
+  type: "Unidentified",
+  description: "Now I've been scared before, but this was a completely different level. I was just enjoying my walk in the dark, when I started to hear some noises nearby in the bushes. Intrigued, I went to have a look, and to my shock and horror, I saw a woman eating a man's face! Here's an image of her just as she got ready to make me her next meal. Safe to say I will stick to the morning for my walks!",
+  image: "https://vignette.wikia.nocookie.net/recsaga/images/4/45/Sra._Izquierdo.jpg/revision/latest?cb=20130803060229&path-prefix=es",
+  author: "chaddythebaddy"
 });
