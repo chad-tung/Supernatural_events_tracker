@@ -37,8 +37,8 @@ MapWrapper.prototype.addClickEvent = function() {
     this.addMarker(coord)
     var latInput = document.getElementById('lat-input');
     var lngInput = document.getElementById('lng-input');
-    latInput.value = coord.lat.toFixed(7);
-    lngInput.value = coord.lng.toFixed(7);
+    latInput.value = coord.lat;
+    lngInput.value = coord.lng;
   }.bind(this));
 };
 

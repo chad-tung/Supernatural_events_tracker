@@ -31,11 +31,11 @@ FormView.prototype = {
 
     var inputLat = eLib.elementNamePlaceholderId('input', 'location[lat]', 'Please click on the map to set lat', 'lat-input');
     inputLat.type = 'number';
-    inputLat.step = '0.000000000000001';
+    inputLat.step = '0.0000000000000001';
 
     var inputLng = eLib.elementNamePlaceholderId('input', 'location[lng]', 'Please click on the map to set lng', 'lng-input');
     inputLng.type = 'number';
-    inputLng.step = '0.000000000000001';
+    inputLng.step = '0.0000000000000001';
 
     var selectType = eLib.elementNamePlaceholderId('select', 'type');
     var typeArr = ["UFO", "Ghost", "Cryptid", "Unidentified"];
