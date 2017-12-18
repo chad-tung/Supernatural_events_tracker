@@ -68,7 +68,7 @@ MapWrapper.prototype.setMarkersInfo = function(eventList){
           // infoWindow.addListener('click', function(){
               //when clicked, open individual view of event
           // });
-        }
+      }
     }
   })
 }
@@ -78,8 +78,20 @@ MapWrapper.prototype.findMe = function(){
         var currentPos = ({lat: position.coords.latitude, lng: position.coords.longitude})
         this.googleMap.setZoom(14);
         this.googleMap.setCenter(currentPos);
-        this.addMarker(currentPos);
+        var image = "https://image.flaticon.com/icons/png/512/33/33622.png"
+
+        var geoMarker = new google.maps.Marker({
+          position: currentPos,
+          map: this.googleMap
+        });
+
+        geoMarker.setAnimation(google.maps.Animation.BOUNCE)
+
+        this.markers.push(geoMarker);
+
     }.bind(this))
 }
-
+//change colour of marker
+//bounce marker
+//don't allow duplicate markers when find me is clicked
 module.exports = MapWrapper;
