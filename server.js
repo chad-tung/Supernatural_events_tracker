@@ -35,6 +35,8 @@ app.get("/api/events", function(req, res){
 });
 
 app.post('/event-form', function(req, res){
+	req.body.location.lat = parseFloat(req.body.location.lat);
+	req.body.location.lng = parseFloat(req.body.location.lng);
 	db.collection("events").save(req.body, function(err, result){
 		if(err) {
 			console.log(err);
@@ -44,6 +46,7 @@ app.post('/event-form', function(req, res){
 		res.redirect("/");
 	});
 });
+
 
 app.post("/deleteAll", function(req, res) {
 	db.collection("events").deleteMany({});

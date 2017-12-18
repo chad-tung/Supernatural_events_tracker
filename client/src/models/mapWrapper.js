@@ -7,6 +7,7 @@ var MapWrapper = function (container, coords, zoom) {
 }
 
 MapWrapper.prototype.addMarker = function(coords) {
+
   var marker = new google.maps.Marker({
     position: coords,
     map: this.googleMap
@@ -36,8 +37,8 @@ MapWrapper.prototype.addClickEvent = function() {
     this.addMarker(coord)
     var latInput = document.getElementById('lat-input');
     var lngInput = document.getElementById('lng-input');
-    latInput.value = coord.lat;
-    lngInput.value = coord.lng;
+    latInput.value = coord.lat.toFixed(7);
+    lngInput.value = coord.lng.toFixed(7);
   }.bind(this));
 };
 
