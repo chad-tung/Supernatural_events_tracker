@@ -130,6 +130,7 @@ h2 {
 .event-container{
   display: flex;
   flex-direction: row;
+  width: 1000px;
 }
 
 #event-form {

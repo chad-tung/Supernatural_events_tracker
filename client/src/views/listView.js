@@ -19,10 +19,8 @@ ListView.prototype = {
 
       container.appendChild(eLib.elementTextIdClass("li", event.date, `${event._id}`, "event-li"));
       container.appendChild(eLib.elementTextIdClass("li", event.title, `${event._id}`, "event-li"));
-      var img = eLib.elementTextIdClass("img", event.image, `${event._id}`, "event-li");
+      var img = eLib.elementTextIdClass("img", event.image, `${event._id}`, "event-image");
       img.src = event.image;
-      img.classList.add("event-image");
-
       container.appendChild(img);
       eventListUL.appendChild(container);
     })
