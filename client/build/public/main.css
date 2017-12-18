@@ -9,7 +9,23 @@ header {
    opacity: 0.95;
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: space-between;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+#nav a {
+  font-size: 0.5em;
+  color: #aaa;
+  letter-spacing: 4px;
+}
+
+#nav a:hover {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
 }
 
 a:visited {
@@ -21,8 +37,8 @@ ul {
    display: flex;
 }
 
-li {
-   margin-right: 10px;
+#nav li {
+   margin-right: 20px;
 }
 
 .logo {
@@ -35,7 +51,7 @@ h1 {
    font-weight: 800;
    letter-spacing: 0.4em;
    word-spacing: 0.5em;
-   font-size: 1.1em;
+   font-size: 0.8em;
    opacity: 0.7;
 }
 
@@ -72,7 +88,84 @@ h2 {
    background: #EFEFEF;
 }
 
-.about-text {
+#about-text {
    max-width: 600px;
    margin: 15px;
+}
+
+#article-1, #article-2, #article-3 {
+  height: 200px;
+  width: 200px;
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 2px;
+}
+
+.marker-image {
+  max-height: 100px;
+}
+
+.marker-info{
+  display: flex;
+  flex-direction: column;
+  background-color: tomato;
+
+}
+
+#event-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#event-form > * {
+  margin-bottom: 10px;
+}
+
+#events-list-page, #form-page {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-map{
+  height:400px;
+  width:500px;
+  border-radius: 3px;
+  border: 1px solid #202020;
+  margin: 10px;
+}
+
+#event-map{
+  height:200px;
+  width:400px;
+  border-radius: 3px;
+  border: 1px solid #202020;
+  margin: 10px;
+}
+
+#form-map{
+  height:200px;
+  width:500px;
+  border-radius: 3px;
+  border: 1px solid #202020;
+  margin: 10px;
+}
+
+#event-item-page ul {
+  flex-direction: column;
+}
+#event-item-page li, #event-list-page li {
+  border: 1px solid grey;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  background-color: #EEE;
+  max-width: 600px;
+  margin-right: 5px;
+  padding: 5px;
 }
