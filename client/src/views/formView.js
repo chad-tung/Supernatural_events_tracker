@@ -59,18 +59,31 @@ FormView.prototype = {
     form.appendChild(inputDescription);
     form.appendChild(inputImage);
     form.appendChild(inputAuthor);
-    form.appendChild(submitButton);
+
     form.appendChild(inputLat);
     form.appendChild(inputLng);
 
     body.appendChild(form);
+    var instructionAndMap = eLib.elementIdClass('div', 'instruction-and-map');
+
+    var header = document.createElement('h3', 'header');
+    header.innerText = "Add your paranormal incident";
+    instructionAndMap.appendChild(header);
 
     var container = eLib.elementIdClass('div', 'form-map');
-    body.appendChild(container);
+    instructionAndMap.appendChild(container);
+
+    var instr = document.createElement('h3', 'instruction');
+    instr.innerText = "Click on the map to add the location";
+    instructionAndMap.appendChild(instr);
+
+    form.appendChild(instructionAndMap);
     var coords = {lat: 55.3781, lng: -3.4360};
     var zoom = 6;
     var formMap = new MapWrapper(container, coords, zoom);
     formMap.addClickEvent();
+
+    form.appendChild(submitButton);
   }
 }
 
