@@ -9,7 +9,7 @@ ListView.prototype = {
   render: function(eventList){
     var eventListPage = document.getElementById('event-list-page');
 
-    var filterType = eLib.elementNamePlaceholderId('select', 'type');
+    var filterType = eLib.elementTextIdClass('select', '', "select-filter");
     var typeArr = ["All", "UFO", "Ghost", "Cryptid", "Unidentified"];
 
     typeArr.forEach(function(type) {
