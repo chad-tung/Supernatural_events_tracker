@@ -3,7 +3,8 @@ var MapWrapper = function (container, coords, zoom) {
     center: coords,
     zoom: zoom
   });
-  this.markers = []
+  this.markers = [];
+  this.geoMarker = [];
 }
 
 MapWrapper.prototype.addMarker = function(coords) {
@@ -78,20 +79,18 @@ MapWrapper.prototype.findMe = function(){
         var currentPos = ({lat: position.coords.latitude, lng: position.coords.longitude})
         this.googleMap.setZoom(14);
         this.googleMap.setCenter(currentPos);
-        var image = "https://image.flaticon.com/icons/png/512/33/33622.png"
 
-        var geoMarker = new google.maps.Marker({
-          position: currentPos,
-          map: this.googleMap
-        });
+        if(this.geoMarker.length !== 1){
+          var geoMarker = new google.maps.Marker({
+            position: currentPos,
+            map: this.googleMap,
+            icon: "https://mt.googleapis.com/vt/icon/name=icons/onion/22-blue-dot.png"
+          });
 
-        geoMarker.setAnimation(google.maps.Animation.BOUNCE)
-
-        this.markers.push(geoMarker);
-
+          geoMarker.setAnimation(google.maps.Animation.BOUNCE)
+          this.geoMarker.push(geoMarker)
+        }
     }.bind(this))
 }
-//change colour of marker
-//bounce marker
-//don't allow duplicate markers when find me is clicked
+
 module.exports = MapWrapper;
