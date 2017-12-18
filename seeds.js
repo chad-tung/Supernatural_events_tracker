@@ -46,10 +46,24 @@ db.events.insert({
   date: "19/11/2017",
   location: {
     lat: 55.849073,
-    lng: -4.26735199999996
+    lng: -4.267350999999962
   },
   type: "Ghost",
   description: "I am an SPT employee, but I can't give you any more details, in case I lose my job. I was carrying out some routine maintenance of the outer tunnel near West Street station, when I saw something terrible. I had turned around, and this kid appeared out of the shadows further down the tunnel, and at first I thought it was a ned playing silly games. I shouted out asking what the hell he was doing down there, when it turned around, I realised something was wrong with his face, as it was distorted and animal like. He appeared to be gnawing on something, it looked like raw meat. As I stepped back in horror, he disappeared. I don't know what I saw, and I can't tell anyone at work, as they'd all think I'd lost my marbles. ",
   image:"http://www.therailengineer.com/wp-content/uploads/Clockwork-Orange-04.jpg",
   author:"nessiespotter"
+});
+
+db.events.insert({
+"_id": "5a36cb72948956336935b7ed",
+"title": "Zombie encounter",
+"date": "2017-12-07",
+"location": {
+"lat": 55.8891761,
+"lng": -3.164625000000001
+},
+"type": "Unidentified",
+"description": "Now I've been scared before, but this was a completely different level. I was just enjoying my walk in the dark, when I started to hear some noises nearby in the bushes. Intrigued, I went to have a look, and to my shock and horror, I saw a woman eating a man's face! Here's an image of her just as she got ready to make me her next meal. Safe to say I will stick to the morning for my walks!",
+"image": "https://vignette.wikia.nocookie.net/recsaga/images/4/45/Sra._Izquierdo.jpg/revision/latest?cb=20130803060229&path-prefix=es",
+"author": ""
 });

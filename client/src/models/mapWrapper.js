@@ -37,8 +37,8 @@ MapWrapper.prototype.addClickEvent = function() {
     this.addMarker(coord)
     var latInput = document.getElementById('lat-input');
     var lngInput = document.getElementById('lng-input');
-    latInput.value = coord.lat.toFixed(7);
-    lngInput.value = coord.lng.toFixed(7);
+    latInput.value = coord.lat;
+    lngInput.value = coord.lng;
   }.bind(this));
 };
 
@@ -47,12 +47,13 @@ MapWrapper.prototype.setMarkersInfo = function(eventList){
 
     this.markers.forEach(function(marker){
       var coords = {lat: marker.getPosition().lat(), lng: marker.getPosition().lng()};
-
+      console.log(coords);
       for (i = 0; i < eventList.length; i++){
         if(coords.lat === eventList[i].location.lat && coords.lng === eventList[i].location.lng){
           var infoWindow = new google.maps.InfoWindow({
               content: `<DIV CLASS="marker-info"> ${eventList[i].title} <IMG BORDER="0" ALIGN="Center" CLASS="marker-image" SRC="${eventList[i].image}"/></DIV>`
           });
+          console.log(eventList[i].location);
 
           marker.addListener('click', function(){
               if(lastOpened){
