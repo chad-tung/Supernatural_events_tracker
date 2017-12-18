@@ -19,21 +19,29 @@ EventView.prototype = {
 
     eventList.forEach(function(event){
       if(event._id === eventID){
-        ul.appendChild(elementCreator('li', 'event-title', event.title))
-        ul.appendChild(elementCreator('li', 'event-date', event.date))
-        ul.appendChild(elementCreator('li', 'event-type', event.type))
-        ul.appendChild(elementCreator('li', 'event-description', event.description))
-        ul.appendChild(elementCreator('li', 'event-image', event.image))
+        ul.appendChild(elementCreator('li', 'event-title', event.title));
+        ul.appendChild(elementCreator('li', 'event-date', event.date));
+        ul.appendChild(elementCreator('li', 'event-type', event.type));
+        ul.appendChild(elementCreator('li', 'event-description', event.description));
 
         if(event.author !== null || event.author !== ""){
-          ul.appendChild(elementCreator('li', 'event-author', event.author))
+          ul.appendChild(elementCreator('li', 'event-author', event.author));
         } else {
-          ul.appendChild(elementCreator('li', 'event-author', "Anonymous"))
+          ul.appendChild(elementCreator('li', 'event-author', "Anonymous"));
         }
+
+        var mapAndImg = document.createElement('div');
+        mapAndImg.id = "map-and-img"
+        ul.appendChild(mapAndImg);
+
+        var image = document.createElement('img');
+        image.id = "event-image"
+        image.src = event.image;
+        mapAndImg.appendChild(image);
 
         var container = document.createElement('div');
         container.id = 'event-map';
-        ul.appendChild(container)
+        mapAndImg.appendChild(container);
 
         var coords = event.location;
         var zoom = 10;

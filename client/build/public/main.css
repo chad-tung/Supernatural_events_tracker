@@ -124,6 +124,16 @@ h2 {
   margin-bottom: 10px;
 }
 
+#event-image{
+  height: 200px;
+  width: 500px;
+}
+
+#map-and-img{
+  display:flex;
+  flex-direction: row;
+}
+
 #events-list-page, #form-page {
   padding-left: 30px;
   padding-right: 30px;
