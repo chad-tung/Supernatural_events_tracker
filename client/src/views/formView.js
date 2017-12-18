@@ -25,10 +25,12 @@ FormView.prototype = {
     var inputLat = eLib.elementNamePlaceholderId('input', 'location[lat]', 'Please click on the map to set lat', 'lat-input');
     inputLat.type = 'number';
     inputLat.step = '0.0000000000000001';
+    inputLat.style.visibility = "collapse"
 
     var inputLng = eLib.elementNamePlaceholderId('input', 'location[lng]', 'Please click on the map to set lng', 'lng-input');
     inputLng.type = 'number';
     inputLng.step = '0.0000000000000001';
+    inputLng.style.visibility = "collapse";
 
     var selectType = eLib.elementNamePlaceholderId('select', 'type');
     var typeArr = ["UFO", "Ghost", "Cryptid", "Unidentified"];
@@ -53,13 +55,13 @@ FormView.prototype = {
     form.appendChild(formTitle);
     form.appendChild(inputTitle);
     form.appendChild(inputDate);
-    form.appendChild(inputLat);
-    form.appendChild(inputLng);
     form.appendChild(selectType);
     form.appendChild(inputDescription);
     form.appendChild(inputImage);
     form.appendChild(inputAuthor);
     form.appendChild(submitButton);
+    form.appendChild(inputLat);
+    form.appendChild(inputLng);
 
     body.appendChild(form);
 
@@ -69,8 +71,6 @@ FormView.prototype = {
     var zoom = 6;
     var formMap = new MapWrapper(container, coords, zoom);
     formMap.addClickEvent();
-
-
   }
 }
 
