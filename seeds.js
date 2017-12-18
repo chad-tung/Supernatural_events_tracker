@@ -55,6 +55,7 @@ db.events.insert({
 });
 
 db.events.insert({
+
  _id: "5a36cb72948956336935b7ed",
  title: "Zombie encounter",
  date: "2017-12-07",
