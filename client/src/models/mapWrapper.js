@@ -48,14 +48,12 @@ MapWrapper.prototype.setMarkersInfo = function(eventList){
 
     this.markers.forEach(function(marker){
       var coords = {lat: marker.getPosition().lat(), lng: marker.getPosition().lng()};
-      console.log(coords);
+
       for (i = 0; i < eventList.length; i++){
         if(coords.lat === eventList[i].location.lat && coords.lng === eventList[i].location.lng){
-          console.log();
           var infoWindow = new google.maps.InfoWindow({
-              content: `<DIV CLASS="marker-info"> ${eventList[i].title} <IMG BORDER="0" ALIGN="Center" CLASS="marker-image" SRC="${eventList[i].image}"/></DIV>`
+              content: `<DIV ID="${eventList[i]._id}" CLASS="marker-info"> ${eventList[i].title} <IMG BORDER="0" ALIGN="Center" CLASS="marker-image" SRC="${eventList[i].image}"/> Click to read more</DIV>`
           });
-          console.log(eventList[i].location);
 
           marker.addListener('click', function(){
               if(lastOpened){
@@ -65,11 +63,6 @@ MapWrapper.prototype.setMarkersInfo = function(eventList){
           lastOpened = infoWindow;
           infoWindow.open(this.googleMap, marker);
           })
-
-          //ADD THIS TO EACH MARKER
-          // infoWindow.addListener('click', function(){
-              //when clicked, open individual view of event
-          // });
       }
     }
   })
