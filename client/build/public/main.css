@@ -14,6 +14,10 @@ header {
    padding-right: 20px;
 }
 
+header a:hover {
+  cursor: pointer;
+}
+
 #nav a {
   font-size: 0.5em;
   color: #aaa;
@@ -38,13 +42,34 @@ ul {
 }
 
 #nav li {
-   margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+   font-size: 0.5em;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 50px;
 }
 
+#nav li:hover {
+  background: #5f7faf;
+  color: white;
+  cursor: pointer;
+  border-bottom: 3px solid cyan;
+  transition: all .25s ease;
+}
+
+#nav li:active {
+  background: white;
+  border-bottom: 3px solid cyan;
+}
+
+
 .logo {
-   color: #CA36E1;
+   color: white;
    opacity: 1;
-   letter-spacing: 0.em;
+   letter-spacing: 0.3em;
 }
 
 h1 {
