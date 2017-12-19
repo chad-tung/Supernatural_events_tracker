@@ -26,6 +26,7 @@ header {
    padding-right: 20px;
 }
 
+
 header button {
   background: none;
   height: 50px;
@@ -70,6 +71,16 @@ header button:hover {
 
 #nav button:focus {
   text-decoration: underline;
+
+footer {
+  height: 80px;
+  background: #303030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5em;
+  color: #EEE;
+
 }
 
 a {
@@ -84,6 +95,7 @@ ul {
    list-style: none;
    display: flex;
 }
+
 
 #nav li {
    margin-right: 20px;
@@ -104,12 +116,12 @@ ul {
   color: #000;
 }
 
+
 h1 {
    font-weight: 800;
    letter-spacing: 0.4em;
    word-spacing: 0.5em;
    font-size: 0.8em;
-   opacity: 0.7;
 }
 
 h2 {
@@ -118,12 +130,19 @@ h2 {
    word-spacing: 0.5em;
 }
 
+.logo {
+   color: #CA36E1;
+   opacity: 1;
+   letter-spacing: 0.em;
+}
+
 .section {
    min-height: 250px;
    display: flex;
    align-items: center;
    justify-content: center;
 }
+
 
 .first {
    background: url("https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?auto=format&fit=crop&w=2767&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
@@ -147,14 +166,9 @@ h2 {
    background: #EFEFEF;
 }
 
-#about-text {
-   max-width: 600px;
-   margin: 15px;
-}
-
 .recent-articles {
   height: 200px;
-  width: 200px;
+  width: 15%;
   background: grey;
   display: flex;
   align-items: center;
@@ -193,6 +207,11 @@ h2 {
   width: 1000px;
 }
 
+#about-text {
+   max-width: 600px;
+   margin: 15px;
+}
+
 #event-form {
   display: flex;
   flex-direction: column;
@@ -202,12 +221,19 @@ h2 {
   margin-bottom: 10px;
 }
 
+input.break #form-description {
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 80px;
+}
+
 #event-image{
   height: 190px;
   width: 500px;
   border: 1px;
   border-style: solid;
 }
+
 
 #map-and-img{
   display:flex;
@@ -224,11 +250,11 @@ h2 {
 }
 
 #main-map{
-  height:400px;
-  width:500px;
+  height:80vh;
+  width:95vw;
   border-radius: 3px;
   border: 1px solid #202020;
-  margin: 10px;
+  margin: 2.5%;
 }
 
 #event-map{
@@ -239,12 +265,23 @@ h2 {
   margin: 10px;
 }
 
-#form-map{
-  height:200px;
-  width:500px;
-  border-radius: 3px;
-  border: 1px solid #202020;
-  margin: 10px;
+#events-list-page, #form-page {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#map-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#map-page button {
+  margin-bottom: 30px;
 }
 
 #event-item-page ul {
@@ -264,24 +301,50 @@ h2 {
   text-align: center;
 }
 
-#instruction-and-map{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #event-list-ul{
   display:flex;
   flex-direction: column;
   align-items: center;
 }
 
-footer {
-  height: 80px;
-  background: #303030;
+#form-map{
+  height:200px;
+  width:500px;
+  border-radius: 3px;
+  border: 1px solid #202020;
+  margin: 10px;
+}
+
+#instruction-and-map{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+
+#main-map{
+  height:400px;
+  width:500px;
+  border-radius: 3px;
+  border: 1px solid #202020;
+  margin: 10px;
+}
+
+#map-and-img{
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+#nav a {
   font-size: 0.5em;
-  color: #EEE;
+  color: #aaa;
+  letter-spacing: 4px;
+}
+
+#nav a:hover {
+  color: #fff;
+}
+
+#nav li {
+   margin-right: 20px;
 }
