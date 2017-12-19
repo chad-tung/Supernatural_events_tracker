@@ -41,12 +41,10 @@ app.post('/event-form', function(req, res){
 		if(err) {
 			console.log(err);
 		}
-
 		console.log("Saved to database.");
-		res.redirect("/");
+		res.json('ok');
 	});
 });
-
 
 app.post("/deleteAll", function(req, res) {
 	db.collection("events").deleteMany({});
