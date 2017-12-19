@@ -148,6 +148,29 @@ h2 {
   border-style: solid;
 }
 
+
+#map-and-img{
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+#events-list-page, #form-page {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-map{
+  height:80vh;
+  width:95vw;
+  border-radius: 3px;
+  border: 1px solid #202020;
+  margin: 2.5%;
+}
+
 #event-map{
   height:200px;
   width:400px;
@@ -162,6 +185,17 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#map-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#map-page button {
+  margin-bottom: 30px;
 }
 
 #event-item-page ul {
