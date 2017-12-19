@@ -57,7 +57,7 @@ ul {
   color: white;
   cursor: pointer;
   border-bottom: 3px solid cyan;
-  
+  transition: all .25s ease;
 }
 
 #nav li:active {
