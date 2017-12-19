@@ -25,14 +25,14 @@ EventView.prototype = {
           ul.appendChild(eLib.elementTextIdClass('li', "Anonymous", 'event-author'));
         }
 
-        var mapAndImg = eLib.elementTextIdClass('div', "", "map-and-img")
+        //Map&Image
         var image = eLib.elementIdClass('img', 'event-image');
         image.src = event.image;
+        var mapAndImg = eLib.elementIdClass('div', "map-and-img");
         mapAndImg.appendChild(image);
-        ul.appendChild(mapAndImg);
-        var container = document.createElement('div');
-        container.id = 'event-map';
+        var container = eLib.elementIdClass('div', "event-map")
         mapAndImg.appendChild(container);
+        ul.appendChild(mapAndImg);
 
         var coords = event.location;
         var zoom = 10;
