@@ -223,7 +223,9 @@ img.marker-image {
   font-size: 0.6em;
 }
 
-
+#form-description{
+  height: 50px;
+}
 
 #events-list-page, #form-page {
   padding-left: 30px;

@@ -41,7 +41,7 @@ FormView.prototype = {
       selectType.appendChild(option);
     });
 
-    var inputDescription = eLib.elementNamePlaceholderId('input', 'description', 'Please describe what you witnessed', 'form-description');
+    var inputDescription = eLib.elementNamePlaceholderId('textarea', 'description', 'Please describe what you witnessed', 'form-description');
     inputDescription.required = true;
 
     var inputImage = eLib.elementNamePlaceholderId('input', 'image', 'Paste image url');
