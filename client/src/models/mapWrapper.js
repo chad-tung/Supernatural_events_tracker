@@ -115,6 +115,7 @@ MapWrapper.prototype.searchBar = function(div) {
         return;
       }
 
+// Put this back in if we want icons
       // var icon = {
       //   url: "http://icons.iconarchive.com/icons/icons-land/vista-map-markers/256/Map-Marker-Marker-Outside-Chartreuse-icon.png",
       //   scaledSize: new google.maps.Size(35, 35)
