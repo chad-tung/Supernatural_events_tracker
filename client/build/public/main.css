@@ -42,7 +42,7 @@ ul {
 }
 
 .logo {
-   color: #EFEFEF;
+   color: #CA36E1;
    opacity: 1;
    letter-spacing: 0.em;
 }
@@ -174,10 +174,29 @@ h2 {
 
 #main-map{
   height:400px;
-  width:500px;
+  width:95vw;
   border-radius: 3px;
   border: 1px solid #202020;
   margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#map-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#map-page button {
+  margin: 20px;
+}
+
+input#search-input {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 4px;
 }
 
 #event-map{
