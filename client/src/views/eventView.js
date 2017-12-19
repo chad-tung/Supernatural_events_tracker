@@ -25,12 +25,10 @@ EventView.prototype = {
           ul.appendChild(eLib.elementTextIdClass('li', "Anonymous", 'event-author'));
         }
 
-        var mapAndImg = document.createElement('div');
-        mapAndImg.id = "map-and-img"
+        var mapAndImg = eLib.elementTextIdClass('div', "", "map-and-img")
         ul.appendChild(mapAndImg);
 
-        var image = document.createElement('img');
-        image.id = "event-image"
+        var image = eLib.elementIdClass('img', 'event-image');
         image.src = event.image;
         mapAndImg.appendChild(image);
 
