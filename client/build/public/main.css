@@ -141,6 +141,12 @@ h2 {
   margin-bottom: 10px;
 }
 
+input.break #form-description {
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 80px;
+}
+
 #event-image{
   height: 190px;
   width: 500px;
