@@ -80,12 +80,11 @@ FormView.prototype = {
 
     formMap.addClickEvent();
 
-    //MODAL
+    //modal
     var modal = eLib.elementTextIdClass('div', "", "myModal", "modal");
     var spanDiv = eLib.elementTextIdClass('div', "", "", "modal-content");
-    var modalCloseBtn = eLib.elementTextIdClass('a', "Close", "", "modal-close");
-    var modalText = eLib.elementTextIdClass('p', "Thank you for your submission, you are doing noble work.");
-
+    var modalCloseBtn = eLib.elementTextIdClass('a', "Close", "modal-close", "close");
+    var modalText = eLib.elementTextIdClass('p', "Thank you for your submission.");
 
     spanDiv.appendChild(modalText);
     spanDiv.appendChild(modalCloseBtn);
