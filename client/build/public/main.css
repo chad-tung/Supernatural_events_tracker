@@ -150,10 +150,6 @@ input.break #form-description {
   word-break: break-all;
   height: 80px;
 }
-#form-description {
-  height: 80px;
-}
-
 
 #event-image{
   height: 190px;
