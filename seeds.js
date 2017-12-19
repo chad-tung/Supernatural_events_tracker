@@ -29,7 +29,7 @@ db.events.insert({
 });
 
 db.events.insert({
-  title: "strange presence followed me",
+  title: "A strange presence followed me",
   date: "03/04/2017",
   location: {
     lat: 57.069928,
@@ -58,7 +58,7 @@ db.events.insert({
 
   _id: "5a36cb72948956336935b7ed",
   title: "Zombie encounter",
-  date: "2017-12-07",
+  date: "2017/12/07",
   location: {
     lat: 55.8891761,
     lng: -3.164625000000001

@@ -52,13 +52,15 @@ ListView.prototype = {
   },
 
   renderIndividual: function(item, parentDiv) {
-    var container = document.createElement('div');
+    var container = document.createElement('li');
     container.classList.add("event-container");
-    container.appendChild(eLib.elementTextIdClass("li", item.date, `${item._id}`, "event-li"));
-    container.appendChild(eLib.elementTextIdClass("li", item.title, `${item._id}`, "event-li"));
-    var img = eLib.elementTextIdClass("img", item.image, `${item._id}`, "event-image");
-    img.src = item.image;
-    container.appendChild(img);
+    container.setAttribute('id', `${item._id}`);
+    container.appendChild(eLib.elementTextIdClass("div", item.date, "event-item-date", ""));
+    container.appendChild(eLib.elementTextIdClass("div", item.title, "event-item-title", ""));
+    container.appendChild(eLib.elementTextIdClass("div", item.type, "event-item-type", ""));
+    // var img = eLib.elementTextIdClass("img", item.image, `${item._id}`, "event-image");
+    // img.src = item.image;
+    // container.appendChild(img);
     parentDiv.appendChild(container);
   },
 

@@ -22,7 +22,22 @@ var BodyMongoler = function(req) {
   if (req.body.author == "") {
     req.body.author = "Anonymous";
   }
+
   req.body.location=JSON.parse(req.body.location);
-}
+
+
+  // Sorts dates
+  var newDate = req.body.date.split("-");
+  newDate.reverse();
+  editedDate = "";
+  for (var i=0; i < 2; i++) {
+    editedDate += newDate[i] + "/";
+  }
+  editedDate += newDate[2];
+  req.body.date = editedDate;
+
+  req.body.location.lat = parseFloat(req.body.location.lat);
+  req.body.location.lng = parseFloat(req.body.location.lng);
+
 
 module.exports = BodyMongoler;
