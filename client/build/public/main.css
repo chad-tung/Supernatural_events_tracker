@@ -38,7 +38,20 @@ ul {
 }
 
 #nav li {
-   margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+   font-size: 0.6em;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 50px;
+}
+
+#nav li:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
 }
 
 .logo {
