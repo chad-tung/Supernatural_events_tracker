@@ -18,13 +18,11 @@ var BodyMongoler = function(req) {
       req.body.image = unknownImage;
     }
   }
+  
   if (req.body.author == "") {
     req.body.author = "Anonymous";
   }
   req.body.location=JSON.parse(req.body.location);
-
-  // req.body.location.lat = parseFloat(req.body.location.lat);
-  // req.body.location.lng = parseFloat(req.body.location.lng);
 }
 
 module.exports = BodyMongoler;

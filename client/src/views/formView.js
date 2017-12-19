@@ -77,11 +77,11 @@ FormView.prototype = {
     //MODAL
     var modal = eLib.elementTextIdClass('div', "", "myModal", "modal");
     var spanDiv = eLib.elementTextIdClass('div', "", "", "modal-content");
-    var span = eLib.elementTextIdClass('span', "", "", "close");
+    var modalCloseBtn = eLib.elementTextIdClass('button', "Close", "", "modal-close");
     var modalText = eLib.elementTextIdClass('p', "Thank you for your submission, you are doing noble work.");
 
-    spanDiv.appendChild(span);
-    spanDiv.appendChild(modalText)
+    spanDiv.appendChild(modalText);
+    spanDiv.appendChild(modalCloseBtn);
     modal.appendChild(spanDiv);
     form.appendChild(modal);
     form.appendChild(submitButton);
@@ -94,11 +94,11 @@ FormView.prototype = {
 
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-      xhr.addEventListener('load', function(){
+      xhr.addEventListener('load', function(event){
         modal.style.display = "block";
-        console.log("firing");
-        span.onclick = function(){
-          modal.style.display = "none";
+
+        modalCloseBtn.onclick = function(event){
+            modal.style.display = "none";
         };
 
         window.onclick = function(event){
