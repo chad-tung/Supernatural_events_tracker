@@ -43,7 +43,7 @@ app.post('/event-form', function(req, res){
 		}
 
 		console.log("Saved to database.");
-		res.json("ok");
+		res.redirect("/");
 	});
 });
 

@@ -60,7 +60,7 @@ FormView.prototype = {
     form.appendChild(inputLng);
     form.appendChild(submitButton);
     body.appendChild(form);
-    
+
     var instructionAndMap = eLib.elementIdClass('div', 'instruction-and-map');
 
     var header = document.createElement('h3', 'header');

@@ -1,7 +1,7 @@
 var BodyMongoler = function(req) {
   var ufoImage = "https://s14.postimg.org/dve7x5ump/UFO.png"
   var ghostImage = "https://s14.postimg.org/hqhlzrvsx/ghostie.png"
-  var cryptidImage = "https://s14.postimg.org/b014q90wh/nessie.png"
+  var cryptidImage = "https://s14.postimg.org/gkdm11s3l/nessie.png"
   var unknownImage = "https://s14.postimg.org/vvitnnctt/questionmark.png"
 
   if (req.body.image == "") {
