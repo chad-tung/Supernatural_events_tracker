@@ -18,19 +18,23 @@ FormView.prototype = {
     var formTitle = eLib.elementTextIdClass("h2", "Event Form");
 
     var inputTitle = eLib.elementNamePlaceholderId('input', 'title', 'Please enter a title');
+    inputTitle.required = true;
 
     var inputDate = eLib.elementNamePlaceholderId('input', 'date');
     inputDate.type = 'date';
+    inputDate.required = true;
 
     var inputLat = eLib.elementNamePlaceholderId('input', 'location[lat]', 'Please click on the map to set lat', 'lat-input');
     inputLat.type = 'number';
     inputLat.step = '0.0000000000000001';
     inputLat.style.visibility = "collapse"
+    inputLat.required = true;
 
     var inputLng = eLib.elementNamePlaceholderId('input', 'location[lng]', 'Please click on the map to set lng', 'lng-input');
     inputLng.type = 'number';
     inputLng.step = '0.0000000000000001';
     inputLng.style.visibility = "collapse";
+    inputLat.required = true;
 
     var selectType = eLib.elementNamePlaceholderId('select', 'type');
     var typeArr = ["UFO", "Ghost", "Cryptid", "Unidentified"];
@@ -41,6 +45,7 @@ FormView.prototype = {
     });
 
     var inputDescription = eLib.elementNamePlaceholderId('input', 'description', 'Please describe what you witnessed', 'form-description');
+    inputDescription.required = true;
 
 
     var inputImage = eLib.elementNamePlaceholderId('input', 'image', 'Paste image url');
@@ -81,7 +86,14 @@ FormView.prototype = {
     var coords = {lat: 55.3781, lng: -3.4360};
     var zoom = 6;
     var formMap = new MapWrapper(container, coords, zoom);
+
+    var searchBox = eLib.elementNamePlaceholderId("input", "", "Location Search Bar", "form-search-input");
+    searchBox.class = "controls";
+    searchBox.type = "text";
+    formMap.searchBar(searchBox);
+
     formMap.addClickEvent();
+
 
     form.appendChild(submitButton);
   }

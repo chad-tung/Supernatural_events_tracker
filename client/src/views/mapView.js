@@ -1,4 +1,7 @@
 var MapWrapper = require('../models/mapWrapper');
+var ElementLibrary = require('../models/elementLibrary');
+
+var eLib = new ElementLibrary();
 
 var MapView = function(eventList){
   this.render(eventList);
@@ -7,6 +10,10 @@ var MapView = function(eventList){
 MapView.prototype = {
   render: function(eventList){
     var mapPage = document.getElementById('map-page')
+    var searchBox = eLib.elementNamePlaceholderId("input", "", "Location Search Bar", "search-input");
+    searchBox.class = "controls";
+    searchBox.type = "text";
+
     var container = document.createElement('div');
     container.id = 'main-map';
     mapPage.appendChild(container)
@@ -25,6 +32,8 @@ MapView.prototype = {
     geoButton.innerText = "Find me";
     geoButton.addEventListener("click", map.findMe.bind(map));
     mapPage.appendChild(geoButton)
+
+    map.searchBar(searchBox);
   }
 }
 
