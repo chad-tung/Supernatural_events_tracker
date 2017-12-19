@@ -62,9 +62,9 @@ db.events.insert({
     lng: -3.164625000000001
   },
   type: "Unidentified",
-  description: "Now I've been scared before, but this was a completely different level. I was just enjoying my walk in the dark, when I started to hear some noises nearby in the bushes. Intrigued, I went to have a look, and to my shock and horror, I saw a woman eating a man's face! Here's an image of her just as she got ready to make me her next meal. Safe to say I will stick to the morning for my walks!",
+  description: "Now I've been scared before, but this was a completely different level. I was just enjoying some quality time with my friends, absolutely nothing out of the ordinary. We decide to take some pictures on our polaroid, and while it started developing, we see a figure peering out the window at us during the time of shooting. I know it's not massively clear on this picture, but we are 100% sure it was a zombie, the pale complexion and the bloodthirst in the individual's eyes still send chills up my spine...",
   image: "https://i.ytimg.com/vi/6NNKPBFFaok/maxresdefault.jpg",
-  author: "chaddythebaddy"
+  author: "chadiz2mad"
 });
 
 db.events.insert({
