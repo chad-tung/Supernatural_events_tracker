@@ -33,15 +33,12 @@ EventView.prototype = {
         var container = eLib.elementIdClass('div', "event-map")
         mapAndImg.appendChild(container);
         ul.appendChild(mapAndImg);
-
         var coords = event.location;
         var zoom = 13;
         var map = new MapWrapper(container, coords, zoom);
-
         map.addMarker(event.location);
       }
     })
-
   }
 }
 
