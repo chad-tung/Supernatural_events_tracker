@@ -97,7 +97,7 @@ h2 {
 
 .recent-articles {
   height: 200px;
-  width: 200px;
+  width: 15%;
   background: grey;
   display: flex;
   align-items: center;

@@ -39,6 +39,7 @@ HomeView.prototype = {
       var div = eLib.elementIdClass("div", `${events[i]._id}`, "recent-articles");
       var articleTitle = eLib.elementTextIdClass('h3', `${events[i].title}`);
       div.setAttribute("style", `background: url(${events[i].image})`);
+      div.style.backgroundRepeat = "no-repeat";
       div.appendChild(articleTitle);
       recentPosts.appendChild(div);
     };
