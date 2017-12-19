@@ -81,7 +81,14 @@ FormView.prototype = {
     var coords = {lat: 55.3781, lng: -3.4360};
     var zoom = 6;
     var formMap = new MapWrapper(container, coords, zoom);
+
+    var searchBox = eLib.elementNamePlaceholderId("input", "", "Location Search Bar", "form-search-input");
+    searchBox.class = "controls";
+    searchBox.type = "text";
+    formMap.searchBar(searchBox);
+
     formMap.addClickEvent();
+
 
     form.appendChild(submitButton);
   }

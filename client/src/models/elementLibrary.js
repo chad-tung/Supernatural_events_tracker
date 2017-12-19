@@ -32,7 +32,10 @@ ElementLibrary.prototype = {
   },
   elementNamePlaceholderId: function(elementName, nameString, placeholderString, idName) {
     var element = document.createElement(elementName);
-    element.name = nameString;
+
+    if (elementName) {
+      element.name = nameString;
+    }
 
     if (placeholderString) {
       element.placeholder = placeholderString;
