@@ -127,14 +127,21 @@ h2 {
 .marker-info{
   display: flex;
   flex-direction: column;
-  background-color: tomato;
+  background-color: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
 }
 
-/* .event-container{
-  display: flex;
-  flex-direction: row;
-  width: 1000px;
-} */
+img.marker-image {
+  border: 1px solid;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+#marker-read-more {
+  font-weight: 800;
+}
 
 #event-form {
   display: flex;
