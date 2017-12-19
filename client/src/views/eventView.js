@@ -26,12 +26,10 @@ EventView.prototype = {
         }
 
         var mapAndImg = eLib.elementTextIdClass('div', "", "map-and-img")
-        ul.appendChild(mapAndImg);
-
         var image = eLib.elementIdClass('img', 'event-image');
         image.src = event.image;
         mapAndImg.appendChild(image);
-
+        ul.appendChild(mapAndImg);
         var container = document.createElement('div');
         container.id = 'event-map';
         mapAndImg.appendChild(container);
