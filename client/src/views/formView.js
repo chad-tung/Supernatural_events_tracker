@@ -12,7 +12,7 @@ FormView.prototype = {
     var form = document.createElement("form");
     form.id = "event-form";
 
-    var formTitle = eLib.elementTextIdClass("h2", "Event Form");
+    var formTitle = eLib.elementTextIdClass("h2", "EVENT FORM");
     var inputTitle = eLib.elementNamePlaceholderId('input', 'title', 'Please enter a title');
 
     inputTitle.required = true;
@@ -56,16 +56,10 @@ FormView.prototype = {
     form.appendChild(inputImage);
     form.appendChild(inputAuthor);
 
-    form.appendChild(inputLat);
-    form.appendChild(inputLng);
     form.appendChild(submitButton);
     body.appendChild(form);
 
     var instructionAndMap = eLib.elementIdClass('div', 'instruction-and-map');
-
-    var header = document.createElement('h3', 'header');
-    header.innerText = "Add your paranormal incident";
-    instructionAndMap.appendChild(header);
 
     var container = eLib.elementIdClass('div', 'form-map');
     instructionAndMap.appendChild(container);
@@ -98,6 +92,8 @@ FormView.prototype = {
     modal.appendChild(spanDiv);
     form.appendChild(modal);
     form.appendChild(submitButton);
+    form.appendChild(inputLat);
+    form.appendChild(inputLng);
     //
 
     form.addEventListener('submit', function(event){

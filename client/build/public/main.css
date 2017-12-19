@@ -96,7 +96,6 @@ h2 {
   letter-spacing: 0.3em;
   word-spacing: 0.5em;
   margin-top: 20px;
-
 }
 #recent-container {
   display: flex;
@@ -195,6 +194,12 @@ img.marker-image {
 #event-form {
   display: flex;
   flex-direction: column;
+}
+
+#event-form h2 {
+   font-size: 0.8em;
+   letter-spacing: 0.2em;
+   word-spacing: 0.5em;
 }
 
 #event-form > * {
