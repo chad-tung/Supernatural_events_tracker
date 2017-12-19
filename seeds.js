@@ -63,7 +63,7 @@ db.events.insert({
   },
   type: "Unidentified",
   description: "Now I've been scared before, but this was a completely different level. I was just enjoying my walk in the dark, when I started to hear some noises nearby in the bushes. Intrigued, I went to have a look, and to my shock and horror, I saw a woman eating a man's face! Here's an image of her just as she got ready to make me her next meal. Safe to say I will stick to the morning for my walks!",
-  image: "https://vignette.wikia.nocookie.net/recsaga/images/4/45/Sra._Izquierdo.jpg/revision/latest?cb=20130803060229&path-prefix=es",
+  image: "https://i.ytimg.com/vi/6NNKPBFFaok/maxresdefault.jpg",
   author: "chaddythebaddy"
 });
 
