@@ -68,14 +68,14 @@ db.events.insert({
 });
 
 db.events.insert({
-  title: "Zombie encounter",
+  title: "Roswell UFO",
   date: "12/07/2017",
   location: {
-    lat: 55.8891761,
-    lng: -3.164625000000001
+    lat: 34.542537,
+    lng: -105.874043
   },
-  type: "Unidentified",
-  description: "Now I've been scared before, but this was a completely different level. I was just enjoying my walk in the dark, when I started to hear some noises nearby in the bushes. Intrigued, I went to have a look, and to my shock and horror, I saw a woman eating a man's face! Here's an image of her just as she got ready to make me her next meal. Safe to say I will stick to the morning for my walks!",
-  image: "https://vignette.wikia.nocookie.net/recsaga/images/4/45/Sra._Izquierdo.jpg/revision/latest?cb=20130803060229&path-prefix=es",
-  author: "chaddythebaddy"
+  type: "UFO",
+  description: "In mid-1947, a United States Army Air Forces balloon crashed at a ranch near Roswell, New Mexico. Following wide initial interest in the crashed flying disc, the US military stated that it was merely a conventional weather balloon. Interest subsequently waned until the late 1970s, when ufologists began promoting a variety of increasingly elaborate conspiracy theories, claiming that one or more alien spacecraft had crash-landed, and that the extraterrestrial occupants had been recovered by the military, who then engaged in a cover-up",
+  image: "https://media.nomadicmatt.com/roswell02.jpg",
+  author: "realroswell69"
 });
