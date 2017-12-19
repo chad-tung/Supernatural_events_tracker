@@ -35,8 +35,6 @@ app.get("/api/events", function(req, res){
 	});
 });
 
-
-
 app.post('/event-form', function(req, res){
 	var bodyMongoler = new BodyMongoler(req);
 	db.collection("events").save(req.body, function(err, result){
@@ -45,7 +43,7 @@ app.post('/event-form', function(req, res){
 		}
 
 		console.log("Saved to database.");
-		res.redirect("/");
+		res.json("ok");
 	});
 });
 

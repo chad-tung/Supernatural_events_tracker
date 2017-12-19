@@ -9,11 +9,8 @@ var FormView = function() {
 FormView.prototype = {
   render: function() {
     var body = document.getElementById('form-page');
-
     var form = document.createElement("form");
     form.id = "event-form";
-    form.method = "POST";
-    form.action = "/event-form"
 
     var formTitle = eLib.elementTextIdClass("h2", "Event Form");
 
@@ -45,7 +42,6 @@ FormView.prototype = {
     var inputAuthor = eLib.elementNamePlaceholderId('input', 'author', 'Please tell us your name. If you wish to remain anonymous, leave this blank.');
 
     var submitButton = eLib.elementTextIdClass('button', 'Submit');
-    submitButton.type = 'submit';
 
     form.appendChild(formTitle);
     form.appendChild(inputTitle);
@@ -57,7 +53,7 @@ FormView.prototype = {
 
     form.appendChild(inputLat);
     form.appendChild(inputLng);
-
+    form.appendChild(submitButton);
     body.appendChild(form);
     var instructionAndMap = eLib.elementIdClass('div', 'instruction-and-map');
 
@@ -79,31 +75,43 @@ FormView.prototype = {
     formMap.addClickEvent();
 
     //MODAL
-    var modal = eLib.elementTextIdClass('div', "Thank you for your submission", "myModal", "modal");
+    var modal = eLib.elementTextIdClass('div', "", "myModal", "modal");
     var spanDiv = eLib.elementTextIdClass('div', "", "", "modal-content");
     var span = eLib.elementTextIdClass('span', "", "", "close");
-    var modalText = eLib.elementTextIdClass('p', "Thank you for your submission");
-
-    span.onclick = function(){
-      modal.style.display = "none";
-    };
-
-    submitButton.onclick = function(){
-      modal.style.display = "block";
-    }
-
-    window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    }
+    var modalText = eLib.elementTextIdClass('p', "Thank you for your submission, you are doing noble work.");
 
     spanDiv.appendChild(span);
     spanDiv.appendChild(modalText)
     modal.appendChild(spanDiv);
-
     form.appendChild(modal);
     form.appendChild(submitButton);
+    //
+
+    form.addEventListener('submit', function(event){
+      event.preventDefault();
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", '/event-form', true);
+
+      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+      xhr.addEventListener('load', function(){
+        modal.style.display = "block";
+        console.log("firing");
+        span.onclick = function(){
+          modal.style.display = "none";
+        };
+
+        window.onclick = function(event){
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      })
+
+      xhr.send(`title=${inputTitle.value}&date=${inputDate.value}&location={"lat":${inputLat.value}, "lng":${inputLng.value}}&type=${selectType.value}&description=${inputDescription.value}&image=${inputImage.value}&author=${inputAuthor.value}`);
+    });
+
+
   }
 }
 
