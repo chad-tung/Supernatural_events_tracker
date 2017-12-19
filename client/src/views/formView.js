@@ -13,9 +13,7 @@ FormView.prototype = {
     form.id = "event-form";
 
     var formTitle = eLib.elementTextIdClass("h2", "Event Form");
-
     var inputTitle = eLib.elementNamePlaceholderId('input', 'title', 'Please enter a title');
-
     var inputDate = eLib.elementNamePlaceholderId('input', 'date');
     inputDate.type = 'date';
 
@@ -40,7 +38,6 @@ FormView.prototype = {
     var inputDescription = eLib.elementNamePlaceholderId('input', 'description', 'Please describe what you witnessed', 'form-description');
     var inputImage = eLib.elementNamePlaceholderId('input', 'image', 'Paste image url');
     var inputAuthor = eLib.elementNamePlaceholderId('input', 'author', 'Please tell us your name. If you wish to remain anonymous, leave this blank.');
-
     var submitButton = eLib.elementTextIdClass('button', 'Submit');
 
     form.appendChild(formTitle);
@@ -55,6 +52,7 @@ FormView.prototype = {
     form.appendChild(inputLng);
     form.appendChild(submitButton);
     body.appendChild(form);
+    
     var instructionAndMap = eLib.elementIdClass('div', 'instruction-and-map');
 
     var header = document.createElement('h3', 'header');
@@ -94,12 +92,12 @@ FormView.prototype = {
 
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-      xhr.addEventListener('load', function(event){
+      xhr.addEventListener('load', function(){
         modal.style.display = "block";
 
         modalCloseBtn.onclick = function(event){
             modal.style.display = "none";
-        };
+        }
 
         window.onclick = function(event){
           if (event.target == modal) {
