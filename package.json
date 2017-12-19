@@ -5,7 +5,8 @@
   "scripts": {
     "test": "mocha client/src/specs",
     "start": "nodemon server.js",
-    "webpack": "cd client && webpack -w"
+    "webpack": "cd client && webpack -w",
+    "protractor": "protractor ./client/src/specs/conf.js"
   },
   "keywords": [],
   "author": "",
