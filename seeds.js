@@ -68,14 +68,66 @@ db.events.insert({
 });
 
 db.events.insert({
-  title: "Roswell UFO",
-  date: "12/07/2017",
+  title: "The Enfield Haunting",
+  date: "15/06/1977",
   location: {
-    lat: 34.542537,
-    lng: -105.874043
+    lat: 51.6557091,
+    lng: -0.03843459999995957
+  },
+  type: "Ghost",
+  description: "My sister and I were haunted for years by a poltergeis. We saw furniture moving and pots and pans flew across the room. So-called experts came by and said we were just playing tricks on them but we were only girls at the time. One of the police officers believed us but they all ignored him. To this day I still feel the presence of the poltergeist as if they are just watching and waiting to strike again.",
+  image: "http://features.sky.com/enfield-haunting/media/enfield-jumping-2-lr_junxxvn.jpg",
+  author: "greenStreetSister"
+});
+
+db.events.insert({
+  title: "Trouble at the Tron Theatre",
+  date: "26/10/2016",
+  location: {
+    lat: 55.856939,
+    lng: -4.245497
+  },
+  type: "Unidentified",
+  description: "I am a performer and was taking part in the Christmas pantomime at the theatre. Everyone has heard the story of the boy who died there a long time ago who comes to watch the shows. On the second night of the show, I saw him. He was about 4ft tall and wearing a red scarf and had muddy clothes on, like a chimney sweep. He was smiling so I guess he was enjoying the show at least. I must have been pretty good! Spooky though.. that's the last year I'm doing this panto!",
+  image: "https://i2-prod.glasgowlive.co.uk/incoming/article11021696.ece/ALTERNATES/s1200/1024px-Tron_Theatre_GlasgowJPG.jpg",
+  author: "SwannySmirnoff"
+});
+
+db.events.insert({
+  title: "Roswell UFO",
+  date: "15/02/1947",
+  location: {
+    lat: 40.7127837,
+    lng: -94.00594130000002
   },
   type: "UFO",
-  description: "In mid-1947, a United States Army Air Forces balloon crashed at a ranch near Roswell, New Mexico. Following wide initial interest in the crashed flying disc, the US military stated that it was merely a conventional weather balloon. Interest subsequently waned until the late 1970s, when ufologists began promoting a variety of increasingly elaborate conspiracy theories, claiming that one or more alien spacecraft had crash-landed, and that the extraterrestrial occupants had been recovered by the military, who then engaged in a cover-up",
+  description: "I saw the Flying Disc crash in Roswell in 1947. It wasn't a weather balloon, like the FBi cover-up said it was. It was a huge alien craft, well beyond human technology. I know what I saw.",
   image: "https://media.nomadicmatt.com/roswell02.jpg",
-  author: "realroswell69"
+  author: "roswellizreal69"
+});
+
+db.events.insert({
+  title: "Monet at the Museum",
+  date: "26/10/2016",
+  location: {
+    lat: 41.49932,
+    lng: -81.69436050000002
+  },
+  type: "Ghost",
+  description: "I am the director of architecture here at the Cleveland Museum. I took this photo of a mysterious figure who resembled Claude Monet himself. It is not retouched or photoshopped. My other colleagues saw him too and he was oddly transparent. I think he was visiting his own exhibiton.",
+  image: "https://hips.hearstapps.com/rbk.h-cdn.co/assets/15/44/2048x2048/square-1445877845-monet-image.jpg?resize=768:*",
+  author: "kellyNotaro"
+});
+
+db.events.insert({
+  title: "Photobombing in a restaurant!",
+  date: "26/10/2016",
+  location: {
+    lat: 55.855242,
+    lng: -4.246916000000056
+  },
+  type: "Ghost",
+  description: "I was in Mono with my friend one night and we took this photo and OMG the next day we looked at it and saw this spooky thing in the background! I was not a big ghost believer myself but after seeing this I am converted!",
+  image: "https://hips.hearstapps.com/rbk.h-cdn.co/assets/15/44/768x384/landscape-1445877041-landscape-1445534554-1oedgza.jpg?resize=980:*",
+  author: "weeBizzyBody"
 });
