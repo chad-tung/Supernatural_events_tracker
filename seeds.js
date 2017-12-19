@@ -131,3 +131,29 @@ db.events.insert({
   image: "https://hips.hearstapps.com/rbk.h-cdn.co/assets/15/44/768x384/landscape-1445877041-landscape-1445534554-1oedgza.jpg?resize=980:*",
   author: "weeBizzyBody"
 });
+
+db.events.insert({
+  title: "George Washington In My Bedroom",
+  date: "26/10/2016",
+  location: {
+    lat: 55.8528527,
+    lng: -4.043587699999989
+  },
+  type: "Ghost",
+  description: "I was just in my room and a ghostlike face of George Washington showed up to watch me sleep.. weird!",
+  image: "https://hips.hearstapps.com/rbk.h-cdn.co/assets/15/44/1280x1706/gallery-1445875594-1445868506-syn-rbk-1445836560-x9cck1f.jpg?resize=980:*",
+  author: "americanScholar"
+});
+
+db.events.insert({
+  title: "Samurai warrior ghost",
+  date: "26/10/2016",
+  location: {
+    lat: 55.4968296,
+    lng: -4.616710199999943
+  },
+  type: "Ghost",
+  description: "On the beach with my little girl and there was an apparition of a samurai warrior behind her. What the hell? If anyone knows more about this please get in touch with me. Scared for my little girl!",
+  image: "https://hips.hearstapps.com/rbk.h-cdn.co/assets/15/38/768x420/gallery-1442511890-1429632430-samurai-ghost.jpg?resize=980:*",
+  author: "ChanderBING"
+});
