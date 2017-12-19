@@ -34,7 +34,7 @@ EventView.prototype = {
         mapAndImg.appendChild(container);
         ul.appendChild(mapAndImg);
         var coords = event.location;
-        var zoom = 13;
+        var zoom = 10;
         var map = new MapWrapper(container, coords, zoom);
         map.addMarker(event.location);
       }
