@@ -61,6 +61,23 @@ h2 {
    word-spacing: 0.5em;
 }
 
+#recent-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+#recent-posts h2 {
+  font-size: 0.6em;
+  letter-spacing: 0.3em;
+  word-spacing: 0.5em;
+  margin-top: 20px;
+
+}
+#recent-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .section {
    min-height: 250px;
    display: flex;
