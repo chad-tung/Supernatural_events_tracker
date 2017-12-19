@@ -180,7 +180,7 @@ img.marker-image {
 }
 
 #main-map{
-  height:400px;
+  height:80vh;
   width:95vw;
   border-radius: 3px;
   border: 1px solid #202020;
