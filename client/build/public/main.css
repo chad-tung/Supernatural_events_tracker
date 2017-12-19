@@ -99,6 +99,7 @@ h2 {
   height: 200px;
   width: 200px;
   background: grey;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
