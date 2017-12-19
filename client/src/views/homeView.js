@@ -39,11 +39,15 @@ HomeView.prototype = {
     events.reverse();
     for(var i=0; i < 3; i++) {
       var div = eLib.elementIdClass("div", `${events[i]._id}`, "recent-articles");
+      var articleTitleDiv = document.createElement('div');
       var articleTitle = eLib.elementTextIdClass('h3', `${events[i].title}`);
+      articleTitleDiv.style = "background: rgba(220, 220, 220, 0.5); width: 100%; color: white;";
+      // "rgba(220, 220, 220)"
+      articleTitleDiv.appendChild(articleTitle);
       div.setAttribute("style", `background: url(${events[i].image})`);
       div.style.backgroundRepeat = "no-repeat";
       div.style.backgroundSize = "cover";
-      div.appendChild(articleTitle);
+      div.appendChild(articleTitleDiv);
       recentPosts.appendChild(div);
     };
   }
