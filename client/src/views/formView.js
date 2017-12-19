@@ -41,13 +41,8 @@ FormView.prototype = {
     });
 
     var inputDescription = eLib.elementNamePlaceholderId('input', 'description', 'Please describe what you witnessed', 'form-description');
-
-
     var inputImage = eLib.elementNamePlaceholderId('input', 'image', 'Paste image url');
-
-
     var inputAuthor = eLib.elementNamePlaceholderId('input', 'author', 'Please tell us your name. If you wish to remain anonymous, leave this blank.');
-
 
     var submitButton = eLib.elementTextIdClass('button', 'Submit');
     submitButton.type = 'submit';
@@ -83,6 +78,31 @@ FormView.prototype = {
     var formMap = new MapWrapper(container, coords, zoom);
     formMap.addClickEvent();
 
+    //MODAL
+    var modal = eLib.elementTextIdClass('div', "Thank you for your submission", "myModal", "modal");
+    var spanDiv = eLib.elementTextIdClass('div', "", "", "modal-content");
+    var span = eLib.elementTextIdClass('span', "", "", "close");
+    var modalText = eLib.elementTextIdClass('p', "Thank you for your submission");
+
+    span.onclick = function(){
+      modal.style.display = "none";
+    };
+
+    submitButton.onclick = function(){
+      modal.style.display = "block";
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+
+    spanDiv.appendChild(span);
+    spanDiv.appendChild(modalText)
+    modal.appendChild(spanDiv);
+
+    form.appendChild(modal);
     form.appendChild(submitButton);
   }
 }
