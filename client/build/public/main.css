@@ -160,8 +160,7 @@ img.marker-image {
 }
 
 #event-image{
-  height: 190px;
-  width: 500px;
+  max-width: 500px;
   border: 1px;
   border-style: solid;
 }
@@ -170,6 +169,7 @@ img.marker-image {
   display:flex;
   justify-content: space-around;
   flex-direction: column;
+  align-items: center;
 }
 
 #event-description {
