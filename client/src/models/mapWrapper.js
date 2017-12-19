@@ -93,7 +93,7 @@ MapWrapper.prototype.searchBar = function(div) {
   var map = this.googleMap;
   var searchBox = new google.maps.places.SearchBox(div);
 
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(div);
+  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(div);
 
   map.addListener('bounds_changed', function() {
     searchBox.setBounds(map.getBounds());
