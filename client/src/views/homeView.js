@@ -10,6 +10,7 @@ HomeView.prototype = {
     var homepageDiv = document.getElementById('home-page');
 
     var recent_posts = eLib.elementIdClass('div', 'recent-posts', 'section', 'third');
+    var recentHeader = eLib.elementTextIdClass("h2", "RECENT POSTS");
 
     var homeimageDiv = eLib.elementIdClass("div", "home-image", "section", "first");
 
@@ -28,6 +29,7 @@ HomeView.prototype = {
 
     aboutDiv.appendChild(aboutHeader);
     aboutDiv.appendChild(aboutText);
+    recent_posts.appendChild(recentHeader);
 
     homepageDiv.appendChild(homeimageDiv);
     homepageDiv.appendChild(aboutDiv);
@@ -36,6 +38,9 @@ HomeView.prototype = {
 
   renderRecent: function(events) {
     recentPosts = document.getElementById('recent-posts');
+    recentPostsContainer = document.createElement('div');
+    recentPosts.appendChild(recentPostsContainer);
+    recentPostsContainer.setAttribute('id', 'recent-container');
     events.reverse();
     for(var i=0; i < 3; i++) {
       var div = eLib.elementIdClass("div", `${events[i]._id}`, "recent-articles");
@@ -48,7 +53,7 @@ HomeView.prototype = {
       div.style.backgroundRepeat = "no-repeat";
       div.style.backgroundSize = "cover";
       div.appendChild(articleTitleDiv);
-      recentPosts.appendChild(div);
+      recentPostsContainer.appendChild(div);
     };
   }
 }
