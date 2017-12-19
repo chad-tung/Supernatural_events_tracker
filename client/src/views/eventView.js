@@ -1,7 +1,9 @@
 var MapWrapper = require("../models/mapWrapper");
+var elementLibrary = require("../models/elementLibrary");
 
 var EventView = function(eventList, eventID){
   this.render(eventList, eventID);
+  var eLib = new ElementLibrary();
 }
 
 var elementCreator = function(elementname, idname, innerString) {
