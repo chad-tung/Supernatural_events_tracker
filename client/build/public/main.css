@@ -351,6 +351,11 @@ li.event-container:hover {
   align-items: center;
 }
 
+#sceptics-believers{
+  display: flex;
+  flex-direction: row;
+}
+
 .dislike-button{
   background-color: #4CAF50;
   border: none;
