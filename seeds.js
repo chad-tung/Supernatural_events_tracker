@@ -181,3 +181,78 @@ db.events.insert({
   sceptics: 0,
   believers: 0
 });
+
+db.events.insert({
+  title: "Arches Night Out Spookfest",
+  date: "15/07/2016",
+  location: {
+    lat: 55.8577392,
+    lng: -4.258737800000063
+  },
+  type: "Cryptid",
+  description: "Was out on the lash at the arches.. wasn't sure if it was the drugs or not but I saw a wee girl who had no place being there. She was about 4 or 5 and wearing old clothes. Was awfy strange. I heard that's why they really shut it down ",
+  image:"http://www.thegpi.co.uk/wp-content/uploads/2014/11/DSC03375-1024x768.jpg",
+  author:"MonTheHoops",
+  sceptics: 0,
+  believers: 0
+});
+
+db.events.insert({
+  title: "Provan Hall Poltergeist",
+  date: "5/12/2013",
+  location: {
+    lat: 55.87177579999999,
+    lng: -4.131136599999991
+  },
+  type: "Ghost",
+  description: "Was out at Provan Hall on a family day out with my husband and children. My kids were running about madly as they normally do so we let them be while we took a walk around the grounds. Then we heard them crying and running back to us saying there was a scary man offering them sweeties. Immediately we ran round to see nothing and there was no man there - nobody was around at all. After making sure of this the children calmed down and eventually told us that it was a ghostly man. They were so shooken up that I believed them about it. Must have been a real ghost.",
+  image:"https://i2.wp.com/glasgowliving.today/wp-content/uploads/2015/06/provan-hall.jpg",
+  author:"KatherineMerryweather",
+  sceptics: 0,
+  believers: 0
+});
+
+db.events.insert({
+  title: "Bridge Encounter",
+  date: "13/04/2016",
+  location: {
+    lat: 55.837231,
+    lng: -4.209546000000046
+  },
+  type: "Unidentified",
+  description: "Walking home after a night out I felt this weird ghostlike tap on the shoulder and somebody screamed in my ear. Not sure what to make of it. Might have been my hearing aid. Ran round the corner and looked back to see something there so took a photo of it on my phone. Pure shat myself.",
+  image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUQnp_sy6TllE4nqrooYAMaeuoWUrJz_HF-3_J2eobHuIXTOpN",
+  author:"JoeBlogger",
+  sceptics: 0,
+  believers: 0
+});
+
+db.events.insert({
+  title: "Transport Museum",
+  date: "15/08/2016",
+  location: {
+    lat: 55.8651338,
+    lng: -4.306318499999975
+  },
+  type: "Ghost",
+  description: "Took this photo on a day out with my family. It definitely looks like a young girl to me. Some people have said it is a little boy but it appears like it is wearing a dress with flowers on it. It has long brown curly hair too. In the pictures I took in the same spot before this one, you can see a mist forming at the bottom of the picture and then she appears. It was like she was forming in the mist, which makes me think it was maybe paranormal. I tried to think logically about it a first but couldn't come up with a way to rationalise it.",
+  image:"https://i2-prod.dailyrecord.co.uk/incoming/article8698484.ece/ALTERNATES/s615b/JS97847105.jpg",
+  author:"LouiseMurphy",
+  sceptics: 0,
+  believers: 0
+});
+
+db.events.insert({
+  title: "Ghost Hunt at the Theatre",
+  date: "15/08/2016",
+  location: {
+    lat: 56.3973859,
+    lng: -3.4317310000000134
+  },
+  type: "Unidentified",
+  description: "Out on a ghost hunt and caught this one - is that an orb floating at the back there? Not sure. It was the best evidence of the night. Thinking of asking for my money back.",
+  image:"http://www.thegpi.co.uk/wp-content/uploads/2014/11/DSC05261-1024x768.jpg",
+  author:"Glasgow Paranormal Investigators",
+  sceptics: 0,
+  believers: 0
+});
