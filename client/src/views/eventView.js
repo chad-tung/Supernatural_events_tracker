@@ -48,7 +48,6 @@ EventView.prototype = {
         doubtButton.innerText = `Sceptic? (Sceptic count: ${event.sceptics})`;
         doubtForm.appendChild(doubtButton);
 
-
         var believeForm = eLib.elementIdClass('form', 'believeForm', 'like-dislike')
         believeForm.action = `/believer/${eventID}`;
         believeForm.method = "POST";

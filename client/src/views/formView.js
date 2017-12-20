@@ -110,7 +110,6 @@ FormView.prototype = {
         modal.style.display = "none";
         location.reload();
       });
-
     });
   }
 }

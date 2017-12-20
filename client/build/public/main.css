@@ -358,11 +358,11 @@ li.event-container:hover {
 }
 
 #doubt-button{
-  background-color: red;
+  background-color: #DC143C;
 }
 
 #believe-button{
-  background-color: green;
+  background-color: #32CD32;
 }
 
 .dislike-button{
