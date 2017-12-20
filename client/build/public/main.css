@@ -353,8 +353,10 @@ li.event-container:hover {
 }
 
 #sceptics-believers{
+  width: 600px;
   display: flex;
   flex-direction: row;
+  justify-content:center;
 }
 
 #doubt-button{
