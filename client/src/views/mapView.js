@@ -10,7 +10,7 @@ var MapView = function(eventList){
 MapView.prototype = {
   render: function(eventList){
     var mapPage = document.getElementById('map-page')
-    var searchBox = eLib.elementNamePlaceholderId("input", "", "Location Search Bar", "search-input");
+    var searchBox = eLib.elementNamePlaceholderId("input", "", "Search", "search-input");
     searchBox.class = "controls";
     searchBox.type = "text";
 
