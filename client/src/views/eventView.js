@@ -38,8 +38,6 @@ EventView.prototype = {
         var map = new MapWrapper(container, coords, zoom);
         map.addMarker(event.location);
 
-        // this is all newly added stuff
-
         var likeDislikeDiv = eLib.elementIdClass('div', 'sceptics-believers');
 
         var doubtForm = eLib.elementIdClass('form', 'doubtForm', 'like-dislike');
@@ -49,7 +47,6 @@ EventView.prototype = {
         doubtButton.type = "submit";
         doubtButton.innerText = `Sceptic? (Sceptic count: ${event.sceptics})`;
         doubtForm.appendChild(doubtButton);
-
 
         var believeForm = eLib.elementIdClass('form', 'believeForm', 'like-dislike')
         believeForm.action = `/believer/${eventID}`;

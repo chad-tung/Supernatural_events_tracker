@@ -328,6 +328,7 @@ li.event-container {
   align-items: space-between;
   justify-content: space-between;
   font-size: 0.7em;
+  cursor: pointer;
 }
 
 li.event-container:hover {
@@ -357,11 +358,11 @@ li.event-container:hover {
 }
 
 #doubt-button{
-  background-color: red;
+  background-color: #DC143C;
 }
 
 #believe-button{
-  background-color: green;
+  background-color: #32CD32;
 }
 
 .dislike-button{
