@@ -356,8 +356,15 @@ li.event-container:hover {
   flex-direction: row;
 }
 
+#doubt-button{
+  background-color: red;
+}
+
+#believe-button{
+  background-color: green;
+}
+
 .dislike-button{
-  background-color: #4CAF50;
   border: none;
   color: white;
   padding: 15px 32px;

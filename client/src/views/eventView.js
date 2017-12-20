@@ -45,7 +45,7 @@ EventView.prototype = {
         var doubtForm = eLib.elementIdClass('form', 'doubtForm', 'like-dislike');
         doubtForm.action = `/sceptic/${eventID}`;
         doubtForm.method = "POST";
-        var doubtButton = eLib.elementIdClass('button', 'doubtButton', 'dislike-button');
+        var doubtButton = eLib.elementIdClass('button', 'doubt-button', 'dislike-button');
         doubtButton.type = "submit";
         doubtButton.innerText = `Sceptic? (Sceptic count: ${event.sceptics})`;
         doubtForm.appendChild(doubtButton);
@@ -54,7 +54,7 @@ EventView.prototype = {
         var believeForm = eLib.elementIdClass('form', 'believeForm', 'like-dislike')
         believeForm.action = `/believer/${eventID}`;
         believeForm.method = "POST";
-        var believeButton = eLib.elementIdClass('button', 'doubtButton', 'dislike-button');
+        var believeButton = eLib.elementIdClass('button', 'believe-button', 'dislike-button');
         believeButton.type = "submit";
         believeButton.innerText = `Believer? (Believer count: ${event.believers})`;
         believeForm.appendChild(believeButton);
