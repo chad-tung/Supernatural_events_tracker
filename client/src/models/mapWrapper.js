@@ -14,8 +14,6 @@ MapWrapper.prototype.addMarker = function(coords) {
     position: coords,
     map: this.googleMap
   });
-  // I don't know why, but I need the line below for the previous marker to disappear...
-  // Maybe it's because if I don't put it into this.markers, then the setMapOnAll(null) still sets it, as it's a marker belonging to null?
   this.markers.push(marker);
 };
 
@@ -99,8 +97,6 @@ MapWrapper.prototype.searchBar = function(div) {
     searchBox.setBounds(map.getBounds());
   })
 
-  // var searchMarker = this.searchMarker;
-
   searchBox.addListener('places_changed', function() {
     var places = searchBox.getPlaces();
 
@@ -114,20 +110,6 @@ MapWrapper.prototype.searchBar = function(div) {
         console.log("Returned place contains no geometry");
         return;
       }
-
-// Put this back in if we want icons
-      // var icon = {
-      //   url: "http://icons.iconarchive.com/icons/icons-land/vista-map-markers/256/Map-Marker-Marker-Outside-Chartreuse-icon.png",
-      //   scaledSize: new google.maps.Size(35, 35)
-      // }
-      //
-      //
-      // searchMarker.push(new google.maps.Marker({
-      //   map: map,
-      //   icon: icon,
-      //   title: place.name,
-      //   position: place.geometry.location
-      // }));
 
       if (place.geometry.viewport) {
         bounds.union(place.geometry.viewport);

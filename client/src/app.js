@@ -54,9 +54,8 @@ var clearPage = function() {
 
 var loadHome = function(eventList) {
 	clearPage();
-	var home = new HomeView();
+	var home = new HomeView(eventList);
 	attachNav(eventList);
-	home.renderRecent(eventList);
 
 	var recentEvents = document.getElementsByClassName('recent-articles')
 
