@@ -79,7 +79,12 @@ EventView.prototype = {
 
         ul.appendChild(commentForm);
 
+        ul.appendChild(eLib.elementTextIdClass('h3', 'Comments:'));
+
         var eventComments = event.comments;
+        eventComments.forEach(function(comment) {
+          ul.appendChild(eLib.elementTextIdClass('li', comment, "", "comment"));
+        })
 
       }
 
