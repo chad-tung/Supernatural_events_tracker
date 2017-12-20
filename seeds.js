@@ -14,7 +14,8 @@ db.events.insert({
   image:"http://vvng.victorvalleynews.netdna-cdn.com/wp-content/uploads/2015/12/strange-light-in-the-sky.jpg",
   author: "skeptic236",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -29,7 +30,8 @@ db.events.insert({
   image:"http://ichef.bbci.co.uk/news/976/cpsprodpb/58D0/production/_98763722_lochnesspic976.jpg",
   author:"nessiespotter",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -44,7 +46,8 @@ db.events.insert({
   image:"https://vignette.wikia.nocookie.net/cryptidz/images/9/90/ImagesCAS5I97H.jpg/revision/latest?cb=20140409050343",
   author: "munrobagger",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -59,7 +62,8 @@ db.events.insert({
   image:"http://www.spt.co.uk/corporate/wp-content/uploads/2012/03/120329_tunnels-687x338.jpg",
   author:"nessiespotter",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -74,7 +78,8 @@ db.events.insert({
   image: "https://i.ytimg.com/vi/6NNKPBFFaok/maxresdefault.jpg",
   author: "chadiz2mad",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -89,7 +94,8 @@ db.events.insert({
   image: "http://features.sky.com/enfield-haunting/media/enfield-jumping-2-lr_junxxvn.jpg",
   author: "greenStreetSister",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -104,7 +110,8 @@ db.events.insert({
   image: "https://i2-prod.glasgowlive.co.uk/incoming/article11021696.ece/ALTERNATES/s1200/1024px-Tron_Theatre_GlasgowJPG.jpg",
   author: "SwannySmirnoff",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -119,7 +126,8 @@ db.events.insert({
   image: "https://media.nomadicmatt.com/roswell02.jpg",
   author: "roswellizreal69",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -134,7 +142,8 @@ db.events.insert({
   image: "https://hips.hearstapps.com/rbk.h-cdn.co/assets/15/44/2048x2048/square-1445877845-monet-image.jpg?resize=768:*",
   author: "kellyNotaro",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -149,7 +158,8 @@ db.events.insert({
   image: "https://hips.hearstapps.com/rbk.h-cdn.co/assets/15/44/768x384/landscape-1445877041-landscape-1445534554-1oedgza.jpg?resize=980:*",
   author: "weeBizzyBody",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -164,7 +174,8 @@ db.events.insert({
   image: "https://hips.hearstapps.com/rbk.h-cdn.co/assets/15/44/1280x1706/gallery-1445875594-1445868506-syn-rbk-1445836560-x9cck1f.jpg?resize=980:*",
   author: "americanScholar",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -179,7 +190,8 @@ db.events.insert({
   image: "https://hips.hearstapps.com/rbk.h-cdn.co/assets/15/38/768x420/gallery-1442511890-1429632430-samurai-ghost.jpg?resize=980:*",
   author: "ChanderBING",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -194,7 +206,8 @@ db.events.insert({
   image:"http://www.thegpi.co.uk/wp-content/uploads/2014/11/DSC03375-1024x768.jpg",
   author:"MonTheHoops",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -209,7 +222,8 @@ db.events.insert({
   image:"https://i2.wp.com/glasgowliving.today/wp-content/uploads/2015/06/provan-hall.jpg",
   author:"KatherineMerryweather",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -224,7 +238,8 @@ db.events.insert({
   image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUQnp_sy6TllE4nqrooYAMaeuoWUrJz_HF-3_J2eobHuIXTOpN",
   author:"JoeBlogger",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -239,7 +254,8 @@ db.events.insert({
   image:"https://i2-prod.dailyrecord.co.uk/incoming/article8698484.ece/ALTERNATES/s615b/JS97847105.jpg",
   author:"LouiseMurphy",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
 });
 
 db.events.insert({
@@ -254,5 +270,38 @@ db.events.insert({
   image:"http://www.thegpi.co.uk/wp-content/uploads/2014/11/DSC05261-1024x768.jpg",
   author:"Glasgow Paranormal Investigators",
   sceptics: 0,
-  believers: 0
+  believers: 0,
+  comments: []
+});
+
+db.events.insert({
+  title: "Ghost Hunt at the Theatre",
+  date: "15/08/2016",
+  location: {
+    lat: 56.3973859,
+    lng: -3.4317310000000134
+  },
+  type: "Unidentified",
+  description: "Out on a ghost hunt and caught this one - is that an orb floating at the back there? Not sure. It was the best evidence of the night. Thinking of asking for my money back.",
+  image:"http://www.thegpi.co.uk/wp-content/uploads/2014/11/DSC05261-1024x768.jpg",
+  author:"Glasgow Paranormal Investigators",
+  sceptics: 0,
+  believers: 0,
+  comments: []
+});
+
+db.events.insert({
+  title: "Weird guy/ghost?",
+  date: "18/3/1995",
+  location: {
+    lat: 55.86230860000001,
+    lng: -4.25316429999998
+  },
+  type: "Unidentified",
+  description: "This guy was walking around eating a Greggs. Not sure if Ghost or real person. Found him on FB. If you have any info, contact me.",
+  image:"https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-1/p320x320/11954780_10153109655243857_7773084576672394350_n.jpg?oh=738ba54eb25991442f3aa3e8249503c0&oe=5AC23F35",
+  author:"Anonymous",
+  sceptics: 0,
+  believers: 0,
+  comments: []
 });

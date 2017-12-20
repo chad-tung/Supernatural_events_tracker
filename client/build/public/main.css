@@ -309,6 +309,7 @@ input#search-input {
 #event-item-page ul {
   align-items: center;
   flex-direction: column;
+  padding-left: 0;
 }
 
 #event-item-page li {
