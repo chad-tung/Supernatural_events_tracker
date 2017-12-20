@@ -47,7 +47,6 @@ HomeView.prototype = {
       var articleTitleDiv = document.createElement('div');
       var articleTitle = eLib.elementTextIdClass('h3', `${events[i].title}`);
       articleTitleDiv.style = "background: rgba(220, 220, 220, 0.5); width: 100%; color: white;";
-      // "rgba(220, 220, 220)"
       articleTitleDiv.appendChild(articleTitle);
       div.setAttribute("style", `background: url(${events[i].image})`);
       div.style.backgroundRepeat = "no-repeat";

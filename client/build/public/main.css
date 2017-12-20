@@ -328,6 +328,7 @@ li.event-container {
   align-items: space-between;
   justify-content: space-between;
   font-size: 0.7em;
+  cursor: pointer;
 }
 
 li.event-container:hover {
