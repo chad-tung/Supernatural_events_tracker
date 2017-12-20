@@ -60,6 +60,27 @@ EventView.prototype = {
         likeDislikeDiv.appendChild(doubtForm);
 
         ul.appendChild(likeDislikeDiv);
+
+        var commentForm = eLib.elementIdClass('form', 'commentForm', 'comment', 'form')
+        commentForm.action = `/comment/${eventID}`;
+        commentForm.method = "POST";
+
+        // var idBox = eLib.elementNamePlaceholderId('input', 'id', '', 'id_box');
+        // idBox.style.visibility = 'collapse';
+        // idBox.value = eventID;
+        var commentBox = eLib.elementNamePlaceholderId('textarea', 'comment', 'Please leave your comment', 'commentText');
+
+        var commentButton = eLib.elementIdClass('button', 'comment-button', 'comment-button');
+        commentButton.type = "submit";
+        commentButton.innerText = "Submit comment";
+        commentForm.appendChild(commentBox);
+        // commentForm.appendChild(idBox);
+        commentForm.appendChild(commentButton);
+
+        ul.appendChild(commentForm);
+
+        var eventComments = event.comments;
+
       }
 
     })

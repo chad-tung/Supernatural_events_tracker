@@ -75,6 +75,11 @@ app.post('/believer/:id', function(req, res) {
 	res.redirect("/")
 })
 
+app.post('/comment/:id', function(req, res) {
+	db.collection("events").update({"_id": ObjectId(req.params.id)}, {$push: {"comments": String(req.body.comment)}});
+	res.redirect("/")
+})
+
 app.get('/event-form', function(req, res) {
 	res.sendFile(__dirname + "/client/build/formPage.html");
 })
