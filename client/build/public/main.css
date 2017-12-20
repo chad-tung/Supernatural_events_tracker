@@ -211,10 +211,10 @@ img.marker-image {
   padding: 8px;
   width: 500px;
 }
-/* #event-form button {
+#event-form button {
   width: 90px;
 }
-
+/*
 #event-form button:hover {
   background: #5f7faf;
   color: white;
