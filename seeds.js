@@ -275,22 +275,6 @@ db.events.insert({
 });
 
 db.events.insert({
-  title: "Ghost Hunt at the Theatre",
-  date: "15/08/2016",
-  location: {
-    lat: 56.3973859,
-    lng: -3.4317310000000134
-  },
-  type: "Unidentified",
-  description: "Out on a ghost hunt and caught this one - is that an orb floating at the back there? Not sure. It was the best evidence of the night. Thinking of asking for my money back.",
-  image:"http://www.thegpi.co.uk/wp-content/uploads/2014/11/DSC05261-1024x768.jpg",
-  author:"Glasgow Paranormal Investigators",
-  sceptics: 0,
-  believers: 0,
-  comments: []
-});
-
-db.events.insert({
   title: "Weird guy/ghost?",
   date: "18/3/1995",
   location: {
