@@ -287,5 +287,5 @@ db.events.insert({
   author:"Anonymous",
   sceptics: 0,
   believers: 0,
-  comments: []
+  comments: ["I saw this guy around Trongate recently. He hasn't aged in over 20 years. Maybe a vampire?"]
 });
