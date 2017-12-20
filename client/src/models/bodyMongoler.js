@@ -23,6 +23,9 @@ var BodyMongoler = function(req) {
     req.body.author = "Anonymous";
   }
 
+  req.body.sceptics = parseInt(req.body.sceptics)
+  req.body.believers = parseInt(req.body.believers)
+
   req.body.location=JSON.parse(req.body.location);
 
 

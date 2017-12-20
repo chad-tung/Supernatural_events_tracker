@@ -93,7 +93,6 @@ FormView.prototype = {
     form.appendChild(submitButton);
     form.appendChild(inputLat);
     form.appendChild(inputLng);
-    //
 
     form.addEventListener('submit', function(event){
       event.preventDefault();
@@ -105,7 +104,7 @@ FormView.prototype = {
         modal.style.display = "block";
       });
 
-      xhr.send(`title=${inputTitle.value}&date=${inputDate.value}&location={"lat":${inputLat.value}, "lng":${inputLng.value}}&type=${selectType.value}&description=${inputDescription.value}&image=${inputImage.value}&author=${inputAuthor.value}`);
+      xhr.send(`title=${inputTitle.value}&date=${inputDate.value}&location={"lat":${inputLat.value}, "lng":${inputLng.value}}&type=${selectType.value}&description=${inputDescription.value}&image=${inputImage.value}&author=${inputAuthor.value}&sceptics=${0}&believers=${0}`);
 
       modalCloseBtn.addEventListener('click', function(){
         modal.style.display = "none";
