@@ -408,6 +408,20 @@ footer {
   justify-content: center;
   font-size: 0.5em;
   color: #EEE;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+footer #social-icons {
+  margin-top: 25px;
+}
+footer .fa {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+footer .fa:hover {
+  color: cyan;
 }
 
 .modal {
