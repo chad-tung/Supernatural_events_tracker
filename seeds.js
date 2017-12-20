@@ -100,7 +100,7 @@ db.events.insert({
 
 db.events.insert({
   title: "Trouble at the Tron Theatre",
-  date: "26/10/2016",
+  date: "23/03/2012",
   location: {
     lat: 55.856939,
     lng: -4.245497
@@ -116,7 +116,7 @@ db.events.insert({
 
 db.events.insert({
   title: "Roswell UFO",
-  date: "15/02/1947",
+  date: "05/07/1947",
   location: {
     lat: 40.7127837,
     lng: -94.00594130000002
@@ -132,7 +132,7 @@ db.events.insert({
 
 db.events.insert({
   title: "Monet at the Museum",
-  date: "26/10/2016",
+  date: "28/07/2010",
   location: {
     lat: 41.49932,
     lng: -81.69436050000002
@@ -148,7 +148,7 @@ db.events.insert({
 
 db.events.insert({
   title: "Photobombing in a restaurant!",
-  date: "26/10/2016",
+  date: "15/10/2004",
   location: {
     lat: 55.855242,
     lng: -4.246916000000056
@@ -164,7 +164,7 @@ db.events.insert({
 
 db.events.insert({
   title: "George Washington In My Bedroom",
-  date: "26/10/2016",
+  date: "12/10/2016",
   location: {
     lat: 55.8528527,
     lng: -4.043587699999989
@@ -180,7 +180,7 @@ db.events.insert({
 
 db.events.insert({
   title: "Samurai warrior ghost",
-  date: "26/10/2016",
+  date: "14/06/1999",
   location: {
     lat: 55.4968296,
     lng: -4.616710199999943
@@ -212,7 +212,7 @@ db.events.insert({
 
 db.events.insert({
   title: "Provan Hall Poltergeist",
-  date: "5/12/2013",
+  date: "05/12/2013",
   location: {
     lat: 55.87177579999999,
     lng: -4.131136599999991
@@ -260,7 +260,7 @@ db.events.insert({
 
 db.events.insert({
   title: "Ghost Hunt at the Theatre",
-  date: "15/08/2016",
+  date: "13/07/2016",
   location: {
     lat: 56.3973859,
     lng: -3.4317310000000134
@@ -276,7 +276,7 @@ db.events.insert({
 
 db.events.insert({
   title: "Weird guy/ghost?",
-  date: "18/3/1995",
+  date: "18/03/1995",
   location: {
     lat: 55.86230860000001,
     lng: -4.25316429999998
