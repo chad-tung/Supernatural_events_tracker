@@ -323,6 +323,15 @@ input#search-input {
   padding: 15px;
   text-align: center;
 }
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#commentForm > * {
+  margin-top: 20px;
+}
 
 #event-list-page {
   display: flex;
