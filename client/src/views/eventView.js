@@ -37,6 +37,15 @@ EventView.prototype = {
         var zoom = 10;
         var map = new MapWrapper(container, coords, zoom);
         map.addMarker(event.location);
+
+        // this is all newly added stuff
+
+        var doubtForm = eLib.elementIdClass('form', 'doubtForm', 'like-dislike')
+        doubtForm.action = `/sceptic/${eventID}`
+        doubtForm.method = "POST";
+        var believerForm = eLib.elementIdClass('form', 'doubtForm', 'like-dislike')
+        doubtForm.action = `/believer/${eventID}`
+        doubtForm.method = "POST";
       }
     })
   }
