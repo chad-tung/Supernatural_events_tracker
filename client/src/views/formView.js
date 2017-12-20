@@ -33,16 +33,6 @@ FormView.prototype = {
     inputLng.style.visibility = "collapse";
     inputLat.required = true;
 
-    var inputBelievers = eLib.elementNamePlaceholderId('input', 'believers');
-    inputBelievers.style.visibility = "collapse";
-    inputBelievers.type = 'number';
-    inputBelievers.value = 0;
-
-    var inputSceptics = eLib.elementNamePlaceholderId('input', 'sceptics');
-    inputSceptics.style.visibility = "collapse";
-    inputBelievers.type = 'number';
-    inputSceptics.value = 0;
-
     var selectType = eLib.elementNamePlaceholderId('select', 'type');
     var typeArr = ["UFO", "Ghost", "Cryptid", "Unidentified"];
 
@@ -103,9 +93,6 @@ FormView.prototype = {
     form.appendChild(submitButton);
     form.appendChild(inputLat);
     form.appendChild(inputLng);
-    form.appendChild(inputBelievers);
-    form.appendChild(inputSceptics);
-    //
 
     form.addEventListener('submit', function(event){
       event.preventDefault();
@@ -117,7 +104,7 @@ FormView.prototype = {
         modal.style.display = "block";
       });
 
-      xhr.send(`title=${inputTitle.value}&date=${inputDate.value}&location={"lat":${inputLat.value}, "lng":${inputLng.value}}&type=${selectType.value}&description=${inputDescription.value}&image=${inputImage.value}&author=${inputAuthor.value}&sceptics=${parseInt(inputBelievers.value)}&believers=${parseInt(inputBelievers.value)}`);
+      xhr.send(`title=${inputTitle.value}&date=${inputDate.value}&location={"lat":${inputLat.value}, "lng":${inputLng.value}}&type=${selectType.value}&description=${inputDescription.value}&image=${inputImage.value}&author=${inputAuthor.value}&sceptics=${0}&believers=${0}`);
 
       modalCloseBtn.addEventListener('click', function(){
         modal.style.display = "none";
