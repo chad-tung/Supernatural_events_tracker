@@ -14,6 +14,10 @@ header {
    padding-right: 20px;
 }
 
+header a:hover {
+  cursor: pointer;
+}
+
 #nav a {
   font-size: 0.5em;
   color: #aaa;
@@ -38,13 +42,34 @@ ul {
 }
 
 #nav li {
-   margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+   font-size: 0.5em;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 50px;
 }
 
+#nav li:hover {
+  background: #5f7faf;
+  color: white;
+  cursor: pointer;
+  border-bottom: 3px solid cyan;
+  transition: all .25s ease;
+}
+
+#nav li:active {
+  background: white;
+  border-bottom: 3px solid cyan;
+}
+
+
 .logo {
-   color: #CA36E1;
+   color: white;
    opacity: 1;
-   letter-spacing: 0.em;
+   letter-spacing: 0.3em;
 }
 
 h1 {
@@ -59,6 +84,22 @@ h2 {
    font-size: 0.8em;
    letter-spacing: 0.4em;
    word-spacing: 0.5em;
+}
+
+#recent-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+#recent-posts h2 {
+  font-size: 0.6em;
+  letter-spacing: 0.3em;
+  word-spacing: 0.5em;
+  margin-top: 20px;
+}
+#recent-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .section {
@@ -155,6 +196,12 @@ img.marker-image {
   flex-direction: column;
 }
 
+#event-form h2 {
+   font-size: 0.8em;
+   letter-spacing: 0.2em;
+   word-spacing: 0.5em;
+}
+
 #event-form > * {
   margin-bottom: 10px;
 }
@@ -165,9 +212,16 @@ img.marker-image {
   border-style: solid;
 }
 
+#modal-close{
+  cursor: pointer;
+}
+
+#modal-content{
+
+}
+
 #map-and-img{
   display:flex;
-  justify-content: space-around;
   flex-direction: column;
   align-items: center;
 }
@@ -176,7 +230,9 @@ img.marker-image {
   font-size: 0.6em;
 }
 
-
+#form-description{
+  height: 50px;
+}
 
 #events-list-page, #form-page {
   padding-left: 30px;
@@ -272,6 +328,7 @@ li.event-container {
   align-items: space-between;
   justify-content: space-between;
   font-size: 0.7em;
+  cursor: pointer;
 }
 
 li.event-container:hover {
@@ -295,6 +352,33 @@ li.event-container:hover {
   align-items: center;
 }
 
+#sceptics-believers{
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+}
+
+#doubt-button{
+  background-color: #DC143C;
+}
+
+#believe-button{
+  background-color: #32CD32;
+}
+
+.dislike-button{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 footer {
   height: 80px;
   background: #303030;
@@ -303,4 +387,45 @@ footer {
   justify-content: center;
   font-size: 0.5em;
   color: #EEE;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

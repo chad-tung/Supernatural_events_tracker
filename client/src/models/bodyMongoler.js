@@ -1,8 +1,8 @@
 var BodyMongoler = function(req) {
-  var ufoImage = "https://image.flaticon.com/icons/svg/645/645424.svg"
-  var ghostImage = "https://s17.postimg.org/ebzur4svz/ghostie.png"
-  var cryptidImage = "https://s17.postimg.org/lrz4d0obz/nessie.png"
-  var unknownImage = "https://s17.postimg.org/5waa9vanz/questionmark.png"
+  var ufoImage = "https://s14.postimg.org/dve7x5ump/UFO.png"
+  var ghostImage = "https://s14.postimg.org/hqhlzrvsx/ghostie.png"
+  var cryptidImage = "https://s14.postimg.org/gkdm11s3l/nessie.png"
+  var unknownImage = "https://s14.postimg.org/vvitnnctt/questionmark.png"
 
   if (req.body.image == "") {
     if (req.body.type == "UFO") {
@@ -18,9 +18,16 @@ var BodyMongoler = function(req) {
       req.body.image = unknownImage;
     }
   }
+
   if (req.body.author == "") {
     req.body.author = "Anonymous";
   }
+
+  req.body.sceptics = parseInt(req.body.sceptics)
+  req.body.believers = parseInt(req.body.believers)
+
+  req.body.location=JSON.parse(req.body.location);
+
 
   // Sorts dates
   var newDate = req.body.date.split("-");

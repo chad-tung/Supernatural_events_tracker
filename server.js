@@ -35,30 +35,26 @@ app.get("/api/events", function(req, res){
 	});
 });
 
-
-
 app.post('/event-form', function(req, res){
 	var bodyMongoler = new BodyMongoler(req);
 	db.collection("events").save(req.body, function(err, result){
 		if(err) {
 			console.log(err);
 		}
-
 		console.log("Saved to database.");
-		res.redirect("/");
+		res.json('ok');
 	});
 });
 
+// app.post("/deleteAll", function(req, res) {
+// 	db.collection("events").deleteMany({});
+// 	res.redirect("/");
+// });
 
-app.post("/deleteAll", function(req, res) {
-	db.collection("events").deleteMany({});
-	res.redirect("/");
-});
-
-app.post("/delete/:id", function(req, res){
-	db.collection("events").deleteOne({"_id": ObjectId(req.params.id)});
-	res.redirect("/api/events");
-});
+// app.post("/delete/:id", function(req, res){
+// 	db.collection("events").deleteOne({"_id": ObjectId(req.params.id)});
+// 	res.redirect("/api/events");
+// });
 
 app.get("/events/:id", function(req, res) {
 	db.collection("events").find({"_id": ObjectId(req.params.id)}).toArray(function(err, results) {
@@ -67,6 +63,16 @@ app.get("/events/:id", function(req, res) {
 		}
 		res.json(results);
 	});
+})
+
+app.post('/sceptic/:id', function(req, res) {
+	db.collection("events").findOneAndUpdate({"_id": ObjectId(req.params.id)}, {$inc: {"sceptics": 1}});
+	res.redirect("/")
+})
+
+app.post('/believer/:id', function(req, res) {
+	db.collection("events").findOneAndUpdate({"_id": ObjectId(req.params.id)}, {$inc: {"believers": 1}});
+	res.redirect("/")
 })
 
 app.get('/event-form', function(req, res) {

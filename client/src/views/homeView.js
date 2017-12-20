@@ -1,8 +1,9 @@
 var ElementLibrary = require('../models/elementLibrary');
 
 var eLib = new ElementLibrary();
-var HomeView = function() {
+var HomeView = function(eventList) {
   this.render();
+  this.renderRecent(eventList);
 }
 
 HomeView.prototype = {
@@ -10,6 +11,7 @@ HomeView.prototype = {
     var homepageDiv = document.getElementById('home-page');
 
     var recent_posts = eLib.elementIdClass('div', 'recent-posts', 'section', 'third');
+    var recentHeader = eLib.elementTextIdClass("h2", "RECENT POSTS");
 
     var homeimageDiv = eLib.elementIdClass("div", "home-image", "section", "first");
 
@@ -28,6 +30,7 @@ HomeView.prototype = {
 
     aboutDiv.appendChild(aboutHeader);
     aboutDiv.appendChild(aboutText);
+    recent_posts.appendChild(recentHeader);
 
     homepageDiv.appendChild(homeimageDiv);
     homepageDiv.appendChild(aboutDiv);
@@ -36,19 +39,21 @@ HomeView.prototype = {
 
   renderRecent: function(events) {
     recentPosts = document.getElementById('recent-posts');
-    events.reverse();
-    for(var i=0; i < 3; i++) {
+    recentPostsContainer = document.createElement('div');
+    recentPosts.appendChild(recentPostsContainer);
+    recentPostsContainer.setAttribute('id', 'recent-container');
+
+    for(var i= events.length - 3; i < events.length; i++) {
       var div = eLib.elementIdClass("div", `${events[i]._id}`, "recent-articles");
       var articleTitleDiv = document.createElement('div');
       var articleTitle = eLib.elementTextIdClass('h3', `${events[i].title}`);
       articleTitleDiv.style = "background: rgba(220, 220, 220, 0.5); width: 100%; color: white;";
-      // "rgba(220, 220, 220)"
       articleTitleDiv.appendChild(articleTitle);
       div.setAttribute("style", `background: url(${events[i].image})`);
       div.style.backgroundRepeat = "no-repeat";
       div.style.backgroundSize = "cover";
       div.appendChild(articleTitleDiv);
-      recentPosts.appendChild(div);
+      recentPostsContainer.appendChild(div);
     };
   }
 }
