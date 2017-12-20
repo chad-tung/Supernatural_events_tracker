@@ -40,23 +40,31 @@ EventView.prototype = {
 
         // this is all newly added stuff
 
-        var likeDislikeDiv = eLib.elementIdClass('div', 'sceptics-believers')
+        var likeDislikeDiv = eLib.elementIdClass('div', 'sceptics-believers');
 
-        var doubtForm = eLib.elementIdClass('form', 'doubtForm', 'like-dislike')
-        doubtForm.action = `/sceptic/${eventID}`
+        var doubtForm = eLib.elementIdClass('form', 'doubtForm', 'like-dislike');
+        doubtForm.action = `/sceptic/${eventID}`;
         doubtForm.method = "POST";
-        var doubtButton = eLib.elementIdClass('button', 'doubtButton', 'dislike-button')
-        doubtButton.innerText = `Sceptic? (Sceptic count: ${event.sceptics})`
+        var doubtButton = eLib.elementIdClass('button', 'doubtButton', 'dislike-button');
+        doubtButton.type = "submit";
+        doubtButton.innerText = `Sceptic? (Sceptic count: ${event.sceptics})`;
         doubtForm.appendChild(doubtButton);
 
 
         var believeForm = eLib.elementIdClass('form', 'believeForm', 'like-dislike')
-        believeForm.action = `/believer/${eventID}`
+        believeForm.action = `/believer/${eventID}`;
         believeForm.method = "POST";
         var believeButton = eLib.elementIdClass('button', 'doubtButton', 'dislike-button');
-        believeButton.innerText = `Believer? (Believer count: ${event.believers})`
+        believeButton.type = "submit";
+        believeButton.innerText = `Believer? (Believer count: ${event.believers})`;
         believeForm.appendChild(believeButton);
+
+        likeDislikeDiv.appendChild(believeForm);
+        likeDislikeDiv.appendChild(doubtForm);
+
+        ul.appendChild(likeDislikeDiv);
       }
+
     })
   }
 }

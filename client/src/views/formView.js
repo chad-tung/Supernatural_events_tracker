@@ -117,7 +117,7 @@ FormView.prototype = {
         modal.style.display = "block";
       });
 
-      xhr.send(`title=${inputTitle.value}&date=${inputDate.value}&location={"lat":${inputLat.value}, "lng":${inputLng.value}}&type=${selectType.value}&description=${inputDescription.value}&image=${inputImage.value}&author=${inputAuthor.value}&sceptics=${inputBelievers.value}&believers=${inputBelievers.value}`);
+      xhr.send(`title=${inputTitle.value}&date=${inputDate.value}&location={"lat":${inputLat.value}, "lng":${inputLng.value}}&type=${selectType.value}&description=${inputDescription.value}&image=${inputImage.value}&author=${inputAuthor.value}&sceptics=${parseInt(inputBelievers.value)}&believers=${parseInt(inputBelievers.value)}`);
 
       modalCloseBtn.addEventListener('click', function(){
         modal.style.display = "none";
