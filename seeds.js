@@ -289,3 +289,19 @@ db.events.insert({
   believers: 16,
   comments: ["I saw this guy around Trongate recently. He hasn't aged in over 20 years. Maybe a vampire?", "He is definitely real. His name is Chad but he calls himself 'The Chaddock'"]
 });
+
+db.events.insert({
+  title: "Creepy NCP encounter",
+  date: "18/03/1995",
+  location: {
+    lat: 55.86230860000001,
+    lng: -4.25316429999998
+  },
+  type: "Unidentified",
+  description: "This...thing.. followed me around an NCP car park in Glasgow and wouldn't let me get in my car...!!",
+  image:"https://s10.postimg.org/qdr0tjqp5/25637206_10155997790549025_1222231371_o.png",
+  author:"Anonymous",
+  sceptics: 0,
+  believers: 16,
+  comments: ["I know this guy!!!"]
+});
