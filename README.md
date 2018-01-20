@@ -11,9 +11,9 @@ The project specification was to build a Full Stack (Vanilla) Javascript Webapp,
 To meet these requirements, we used vanilla Javascript to render different views to our index.html file, between the header and footer sections, using an ```onClick``` event listener to render the different components.  For data management, we used ExpressJS with MongoDB as our database and simultaneously pulled our data from an on site JSON API which we created at '/api/events'.
 
 ### Agile Development
-We tried to incorporated Agile Development methodologies into our project from Day 1.  Typically we would begin our days with an informal 'stand up' and briefly review what we had done the previous day, and most importantly, set a realistic target of what we wanted to accomplish by the end of that day.
+We tried to incorporate Agile Development methodologies into our project from Day 1.  Typically we would begin our days with an informal 'stand up' and briefly review what we had done the previous day, and most importantly, set a realistic target of what we wanted to accomplish by the end of that day.
 
-The majority of our project, certainly the MVP, was [mob programmed](https://en.wikipedia.org/wiki/Mob_programming).  Whilst this may have been slightly slower than branching off individually earlier, we found that it left us with fewer bugs, and less time spent on any issues that did arise during development.  We used a tool called Atom Teletype (https://atom.io/packages/teletype), without which our mob programming sessions would not have been possible.
+The majority of our project, certainly the MVP, was [mob programmed](https://en.wikipedia.org/wiki/Mob_programming).  Whilst this may have been slightly slower than branching off individually earlier, we found that it left us with fewer bugs, and less time spent on any issues that did arise during development.  We used a tool called Teletype (https://atom.io/packages/teletype), without which our mob programming sessions would not have been possible.
 
 ### Installation
 To install and run a copy of our webapp: 
