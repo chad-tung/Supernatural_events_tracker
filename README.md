@@ -5,8 +5,8 @@ The Supernatural Events Tracker, aka 'paranormal.DB', was a week long, Full Stac
 
 ### MVP
 The project specification was to build a Full Stack (Vanilla) Javascript Webapp, and in it's simplest form, users should be able to:
-* Input event data (Title, Date, Description, Location via marker drop) into a web form
-* Browse through a list of events, by using a list view, or a map view
+* Input event data to a database (Title, Date, Description, Location via marker drop) via a web form input
+* Browse through a list of events, by using a list view, or a map view, rendered from the data in the database
 
 To meet these requirements, we used vanilla Javascript to render different views to our index.html file, between the header and footer sections, using an ```onClick``` event listener to render the different components.  For data management, we used ExpressJS with MongoDB as our database and simultaneously pulled our data from an on site JSON API which we created at '/api/events'.
 
