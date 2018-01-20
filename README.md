@@ -1,7 +1,7 @@
 # Supernatural_events_tracker
 
 ## Overview
-The Supernatural Events Tracker, aka 'paranormal.DB', was a week long, Full Stack Javascript project undertaken by [Alastair Kane](https://github.com/alistairkane92), [Chad Tung](https://github.com/chad-tung/), [Scott Murray](https://github.com/smrr723) and [Alex Smith](https://github.com/axolotlquestions).
+The Supernatural Events Tracker, aka 'paranormal.DB', was a week long, Full Stack Javascript project undertaken by [Alastair Kane](https://github.com/alistairkane92), [Chad Tung](https://github.com/chad-tung/), [Scott Murray](https://github.com/smrr723) and [Alex Smith](https://github.com/axolotlquestions), as part of the [CodeClan](https://codeclan.com/) Digital Skills course in Software Development.
 
 ### MVP
 The project specification was to build a Full Stack (Vanilla) Javascript Webapp, and in it's simplest form, users should be able to:
